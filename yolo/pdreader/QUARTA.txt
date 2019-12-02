@@ -1,0 +1,48 @@
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 1/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 10.00 - 10.30/Text: Álgebra
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 1/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 11.00 - 11.30/Text: (2TP+1PL)
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 1/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 11.30 - 12.00/Text: Carlos Perquilhas
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 1/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 12.30 - 13.00/Text: O105
+/Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 1/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 10.00 - 10.30/Text: An. Matemática I
+/Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 1/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 11.00 - 11.30/Text: (2TP+1PL)
+/Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 1/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 11.30 - 12.00/Text: Luís Merca
+/Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 1/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 12.30 - 13.00/Text: O104
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 1/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 20.00 - 20.30/Text: Intr. à Tecnologia
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 1/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 21.00 - 21.30/Text: (0,5TP+2,5PL)
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 1/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 21.30 - 22.00/Text: José Ramos
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 1/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 22.30 - 23.00/Text: O102
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 10.00 - 10.30/Text: Prob. Estatística
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 11.00 - 11.30/Text: (2TP+1PL)
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 11.30 - 12.00/Text: Luís Grilo
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 12.30 - 13.00/Text: B256
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.00 - 17.30/Text: Arq. de Comput. I
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.30 - 18.00/Text: (T)
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.00 - 18.30/Text: Carlos Queiroz
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.30 - 19.00/Text: B255
+/Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.00 - 17.30/Text: Arq. de Comput. I
+/Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.30 - 18.00/Text: (T)
+/Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.00 - 18.30/Text: Carlos Queiroz
+/Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.30 - 19.00/Text: B255
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.00 - 17.30/Text: Arq. de Comput. I Est. Dados e Alg.
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.30 - 18.00/Text: (T)
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.00 - 18.30/Text: Carlos Queiroz
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.30 - 19.00/Text: B255
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 20.00 - 20.30/Text: Arq. de Comput. I
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 21.00 - 21.30/Text: (PL)
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 21.30 - 22.00/Text: Carlos Queiroz
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 22.30 - 23.00/Text: I153
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.00 - 17.30/Text: Sist. Distribuídos
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.30 - 18.00/Text: (T)
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.00 - 18.30/Text: António Manso
+/Semestre: 1/AnoLec: 2019 | 20 /Class: A/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.30 - 19.00/Text: B257
+/Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.00 - 17.30/Text: Sist. Distribuídos
+/Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.30 - 18.00/Text: (T)
+/Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.00 - 18.30/Text: António Manso
+/Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.30 - 19.00/Text: B257
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.00 - 17.30/Text: Sist. Distribuídos
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.30 - 18.00/Text: (T)
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.00 - 18.30/Text: António Manso
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.30 - 19.00/Text: B257
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 20.00 - 20.30/Text: Anál. de Sistemas
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 21.00 - 21.30/Text: (PL)
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 21.30 - 22.00/Text: José Casimiro
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 3/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 22.30 - 23.00/Text: I154

@@ -1,0 +1,40 @@
+require 'pdf-reader'
+require 'iguvium'
+require 'byebug'
+​
+filename = "LEI.pdf"
+​
+pdf_reader = PDF::Reader.new(filename)
+iguvium_pages = Iguvium.read(filename)
+​
+curso = pdf_reader.pages[0].text.match /CURSO DE:(.+)ANO:/
+ano = pdf_reader.pages[0].text.match /ANO: .+([1-5]+)º/
+turma = pdf_reader.pages[0].text.match /Turma ([A-Z])/
+ano_lectivo = pdf_reader.pages[0].text.match /ANO LECTIVO: +(20[1-2][0-9] \| [1-2][0-9]+)/
+semestre = pdf_reader.pages[0].text.match /SEMESTRE: +([1-2])º/
+​
+puts "Course: #{curso[1].strip}"
+puts "Year: #{ano[1].strip}"
+puts "Class: #{turma[1]}"
+puts "Academic year: #{ano_lectivo[1]}"
+puts "Semester: #{semestre[1]}"
+​
+dias_da_semana = pdf_reader.pages[0].text.match /\nHORAS +([A-ZÇÁ ]+)\n/
+dias_da_semana = dias_da_semana[1].split
+puts "Days of the week found: #{dias_da_semana.length}: #{dias_da_semana.join(", ")}"
+​
+pdf_reader.pages[0].text 
+tables = iguvium_pages[0].extract_tables!
+schedule_table = tables.first.to_a
+​
+schedule_table.each do |l|
+  hour = l[0]
+  l.each_with_index do |d,i|
+    if i > 0
+      unless d.empty?
+        puts "Class found? Day: #{dias_da_semana[i-1]} / Hour: #{hour} / Text: #{d}"
+      end
+    end
+  end
+  
+end
