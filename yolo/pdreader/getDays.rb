@@ -3,7 +3,7 @@ line_num = 0
 queue = ["SEGUNDA", "TERCA", "QUARTA", "QUINTA", "SEXTA", "SABADO"]
 
 File.open('entradas.txt').each do |line|
-    linha=line.split('/')
+    linha = line.split('/')
     dia_s = "#{linha[6].split(": ")[1]}"
     
     nome_fich = queue.index(dia_s)

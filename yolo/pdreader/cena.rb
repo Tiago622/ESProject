@@ -10,8 +10,10 @@ filename = "LEI.pdf"
 
 pdf_reader = PDF::Reader.new(filename)
 iguvium_pages = Iguvium.read(filename)
-pagina= 0
+pagina = 0
 num_paginas=pdf_reader.page_count-1;
+
+
 
 for pagina in 0..num_paginas do
   
@@ -23,10 +25,10 @@ for pagina in 0..num_paginas do
   semestre = pdf_reader.pages[pagina].text.match /SEMESTRE: +([1-2])º/
   
   curso =  "#{curso[1].strip}"
-  year=   "#{ano[1].strip}"
-  classe=  "#{turma[1]}"
+  year =   "#{ano[1].strip}"
+  classe =  "#{turma[1]}"
   ano_ac = "#{ano_lectivo[1]}"
-  semestre= "#{semestre[1]}"
+  semestre = "#{semestre[1]}"
   
   dias_da_semana = pdf_reader.pages[pagina].text.match /\nHORAS +([A-ZÇÁ ]+)\n/
   dias_da_semana = dias_da_semana[1].split
