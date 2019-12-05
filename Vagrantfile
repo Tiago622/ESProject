@@ -14,12 +14,6 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "jadesystems/rails-5-2"
 
-  config.vm.provider "virtualbox" do |v|
-    v.linked_clone = true
-    v.memory = "1024"
-    v.cpus = 1
-  end
-
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.

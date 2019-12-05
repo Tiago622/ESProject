@@ -4,12 +4,22 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore bundler config.
-/.bundle
-
-# Ignore the default SQLite database.
+### Rails ###
+*.rbc
+capybara-*.html
+.rspec
 /db/*.sqlite3
 /db/*.sqlite3-journal
+/public/system
+/coverage/
+/spec/tmp
+*.orig
+rerun.txt
+pickle-email-*.html
+
+# Ignore bundler config.
+/.bundle
+/vendor/bundle
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -27,5 +37,19 @@
 /public/assets
 .byebug_history
 
+/public/packs
+/public/packs-test
+
 # Ignore master key for decrypting credentials and more.
+config/initializers/secret_token.rb
 /config/master.key
+
+### Vagrant ###
+# General
+.vagrant/
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+*.log
+
+### Vagrant Patch ###
+*.box
