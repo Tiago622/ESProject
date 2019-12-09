@@ -1,0 +1,37 @@
+language: ruby
+cache: bundler
+os: linux
+dist: xenial
+rvm:
+ - 2.5.1
+
+services:
+  - postgresql
+
+addons:
+  code_climate:
+    repo_token:
+      secure: "tlmmtselfroYxCdRlJSeQ3hbFBdbet4u3G+eKfJLRdqaoBhXbqCc1IMnlBt8HYpy0bDksZOPFYY18njp9IKKN9v47oSl2SUQ7co1paQsV6NGeNAzif/lBW0mBSXpl94VJLEC0sL11TCOrCwHLXUnOmEgDK7Ihtk7KIuyMD+sgeXN8o5JVCx7d2wAXIgTrAEqP5Pxzo8uGS2CUmDpYFx08FBZSl4LuoQ/fsF0JaP/fX5fD8X51syTRbZcYfxzEM8yS3GhT+0dTd1U1JDtKHFKLwM6u/1DQVPOaep+HZtQarnYKS1ppiDjZmUAJo1YiOubxb+K7Y8vKFwd8Rtf4ugPYg7FDkphJXkLtSEP7/NoD+BdJTJlIZ15LrWEXL41IuwtYXuZd8OVP5Cz5qtV7a2AeXr8DZN/TNcMJvHcItoSNBR3SjVVUdYpJTGNrmhyRsahU4G5vvRayp5abhAjGiFHtWR2umRsU/Y+9Az+yOfm9ig1NnX0XlZNyGqkrdcJBavS6Zus2YljBL5EcdhjI4KO5+w+4pMwf8SS8eTMbGBqEnQMI0UTolSannSa18PD5rl3mMhx/qXqNxAYTG7627JEN6fz0M9Q6lBzeEWr56vDYYSgZEJicCT4szel5DcK10Z92MwqsWiS2KsQw5H66pzFQpiPQ+YafJ/4edh+Y+0xxh0="
+
+before_install:
+  - gem update --system
+  - gem install bundler
+
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - cp config/database.yml.travis config/database.yml
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake test test/
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+notifications:
+  email: false
+  slack:
+    rooms:
+      secure: J4QHDwSFbCaoiJJeQHUGRj2QOT9YkHyzrgw2fb7NCXa0vJFXiGL5L2nXOJPlCxlV4nVPqIevh8idcu2Npmwym2rXnWR2fdaD8sxdy1Z43WzQHykdNxwotbzLlyhS8Vpd9y91/wj2+vS1eGFJXZKHPOMS1gZK6tOwXc4g4AuV87Fkp7VKdigEqwXQzD27puRPkl2auKz5T8W4iVmRnz3L3ItzyS6RwZ/06cj3WrXW/Elh/p9Ml+JptGtmMVWMGVufSdUjod3+TrRwHc+M6ZVL0dU/xF56bzQXlnAkG20dbaIukJxTnDsMG7riZrGAH/FXOUs+hQQsy8p7EWEIVBJVgx6hJrngmO1DJdhl2OQ8j/cMMZVuPx2cipG4wciF4J0fUTqeYMTAFikBo62U5T0X6QOAJKlSTYfrFdSeE7RO0bK0KCAelqJYeb9IZlrH8k8/Vj/zMAVPYGA+eUNIUucKuWtD3Cs6EB6l3QdFrKxwKdqMRGUj5vyvLhhmOVL/d7DVMZFhVuynjwLidrghBtW2OuR6w7oAe1Do7DNzLL7sQhhj04lMUQLdUAyUTUqa9L9bRLt0L0Pt0cairZJUl0DDfUhcnKzMRHR3ShdOOqVbpFNLSkWFdH78N6hQevpqw7CX4tagZXHx5CZH4K9mWVC0iy9CvDn/inxjjzeJcbdfU5g="
