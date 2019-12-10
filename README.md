@@ -32,3 +32,4 @@ cd /vagrant
 rails server -b 0.0.0.0
 ```
 Acesso: `localhost:3000`
+ 
