@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Tiago622/ESProject.svg?branch=master)](https://travis-ci.org/Tiago622/ESProject)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/15af951dcfeb046b9c4a/maintainability)](https://codeclimate.com/github/Tiago622/ESProject/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/15af951dcfeb046b9c4a/test_coverage)](https://codeclimate.com/github/Tiago622/ESProject/test_coverage)
 
 # README
 
