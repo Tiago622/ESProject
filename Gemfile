@@ -34,6 +34,17 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# Easy-to-use wrapper for Net:HTTP , Net:HTTPS and Net:FTP 
+# TO DO - CHECK IF NECESSARY gem 'open-uri'
+# HTML, XML, SAX and Reader parser. Ability to search documents via XPath
+gem 'nokogiri'
+# PDF parser conforming as much as possible to the PDF specification from Adobe
+gem 'pdf-reader'
+# Extracts tables from PDF as a structured info
+gem 'iguvium'
+# OpenStruct implementation
+gem 'ostruct'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -17,5 +17,4 @@ class Createlesson < ActiveRecord::Migration
 			t.text :motivo_rejeicao
          end
     end
-
 end
