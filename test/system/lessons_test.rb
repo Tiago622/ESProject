@@ -14,11 +14,11 @@ class LessonsTest < ApplicationSystemTestCase
     visit lessons_url
     click_on "New Lesson"
 
-    check "Availability" if @lesson.availability
-    fill_in "Capacity", with: @lesson.capacity
-    fill_in "Equipment", with: @lesson.equipment
+    fill_in "End time", with: @lesson.end_time
+    fill_in "Lesson type", with: @lesson.lesson_type
     fill_in "Name", with: @lesson.name
-    fill_in "Type", with: @lesson.type
+    fill_in "Start time", with: @lesson.start_time
+    fill_in "Week day", with: @lesson.week_day
     click_on "Create Lesson"
 
     assert_text "Lesson was successfully created"
@@ -29,11 +29,11 @@ class LessonsTest < ApplicationSystemTestCase
     visit lessons_url
     click_on "Edit", match: :first
 
-    check "Availability" if @lesson.availability
-    fill_in "Capacity", with: @lesson.capacity
-    fill_in "Equipment", with: @lesson.equipment
+    fill_in "End time", with: @lesson.end_time
+    fill_in "Lesson type", with: @lesson.lesson_type
     fill_in "Name", with: @lesson.name
-    fill_in "Type", with: @lesson.type
+    fill_in "Start time", with: @lesson.start_time
+    fill_in "Week day", with: @lesson.week_day
     click_on "Update Lesson"
 
     assert_text "Lesson was successfully updated"

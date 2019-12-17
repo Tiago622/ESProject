@@ -2,14 +2,14 @@
 
 one:
   name: MyString
-  type: 
-  capacity: 1
-  availability: false
-  equipment: MyString
+  lesson_type: MyString
+  week_day: MyString
+  start_time: 2019-12-17 17:41:47
+  end_time: 2019-12-17 17:41:47
 
 two:
   name: MyString
-  type: 
-  capacity: 1
-  availability: false
-  equipment: MyString
+  lesson_type: MyString
+  week_day: MyString
+  start_time: 2019-12-17 17:41:47
+  end_time: 2019-12-17 17:41:47
