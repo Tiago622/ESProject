@@ -1,6 +1,6 @@
 require 'pdf-reader'
 require 'iguvium'
-require 'byebug'
+# require 'byebug'
 
 file = File.open("entradas.txt", "w");
 file.write("") 

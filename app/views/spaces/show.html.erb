@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @space.name %>
+</p>
+
+<p>
+  <strong>Room type:</strong>
+  <%= @space.room_type %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @space.capacity %>
+</p>
+
+<p>
+  <strong>Equipment:</strong>
+  <%= @space.equipment %>
+</p>
+
+<p>
+  <strong>Availability:</strong>
+  <%= @space.availability %>
+</p>
+
+<%= link_to 'Edit', edit_space_path(@space) %> |
+<%= link_to 'Back', spaces_path %>
