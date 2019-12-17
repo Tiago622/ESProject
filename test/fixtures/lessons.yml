@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  teacher: MyString
+  school_year: MyString
+  lesson_type: MyString
+  weekday: MyString
+  start_time: 2019-12-17 15:48:31
+  end_time: 2019-12-17 15:48:31
+
+two:
+  name: MyString
+  teacher: MyString
+  school_year: MyString
+  lesson_type: MyString
+  weekday: MyString
+  start_time: 2019-12-17 15:48:31
+  end_time: 2019-12-17 15:48:31

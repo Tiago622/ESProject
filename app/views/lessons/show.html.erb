@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lesson.name %>
+</p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @lesson.teacher %>
+</p>
+
+<p>
+  <strong>School year:</strong>
+  <%= @lesson.school_year %>
+</p>
+
+<p>
+  <strong>Lesson type:</strong>
+  <%= @lesson.lesson_type %>
+</p>
+
+<p>
+  <strong>Weekday:</strong>
+  <%= @lesson.weekday %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @lesson.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @lesson.end_time %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>
