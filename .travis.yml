@@ -13,6 +13,9 @@ addons:
     repo_token:
       secure: "tlmmtselfroYxCdRlJSeQ3hbFBdbet4u3G+eKfJLRdqaoBhXbqCc1IMnlBt8HYpy0bDksZOPFYY18njp9IKKN9v47oSl2SUQ7co1paQsV6NGeNAzif/lBW0mBSXpl94VJLEC0sL11TCOrCwHLXUnOmEgDK7Ihtk7KIuyMD+sgeXN8o5JVCx7d2wAXIgTrAEqP5Pxzo8uGS2CUmDpYFx08FBZSl4LuoQ/fsF0JaP/fX5fD8X51syTRbZcYfxzEM8yS3GhT+0dTd1U1JDtKHFKLwM6u/1DQVPOaep+HZtQarnYKS1ppiDjZmUAJo1YiOubxb+K7Y8vKFwd8Rtf4ugPYg7FDkphJXkLtSEP7/NoD+BdJTJlIZ15LrWEXL41IuwtYXuZd8OVP5Cz5qtV7a2AeXr8DZN/TNcMJvHcItoSNBR3SjVVUdYpJTGNrmhyRsahU4G5vvRayp5abhAjGiFHtWR2umRsU/Y+9Az+yOfm9ig1NnX0XlZNyGqkrdcJBavS6Zus2YljBL5EcdhjI4KO5+w+4pMwf8SS8eTMbGBqEnQMI0UTolSannSa18PD5rl3mMhx/qXqNxAYTG7627JEN6fz0M9Q6lBzeEWr56vDYYSgZEJicCT4szel5DcK10Z92MwqsWiS2KsQw5H66pzFQpiPQ+YafJ/4edh+Y+0xxh0="
 
+before_install:
+  - gem update --system
+  - gem install bundler:1.17.3
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
