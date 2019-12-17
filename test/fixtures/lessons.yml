@@ -2,32 +2,14 @@
 
 one:
   name: MyString
-<<<<<<< HEAD
   lesson_type: MyString
   week_day: MyString
-  start_time: 2019-12-17 17:41:47
-  end_time: 2019-12-17 17:41:47
+  start_time: 2019-12-17 17:53:28
+  end_time: 2019-12-17 17:53:28
 
 two:
   name: MyString
   lesson_type: MyString
   week_day: MyString
-  start_time: 2019-12-17 17:41:47
-  end_time: 2019-12-17 17:41:47
-=======
-  teacher: MyString
-  school_year: MyString
-  lesson_type: MyString
-  weekday: MyString
-  start_time: 2019-12-17 15:48:31
-  end_time: 2019-12-17 15:48:31
-
-two:
-  name: MyString
-  teacher: MyString
-  school_year: MyString
-  lesson_type: MyString
-  weekday: MyString
-  start_time: 2019-12-17 15:48:31
-  end_time: 2019-12-17 15:48:31
->>>>>>> JoaoFerreira
+  start_time: 2019-12-17 17:53:28
+  end_time: 2019-12-17 17:53:28

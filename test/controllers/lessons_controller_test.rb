@@ -17,11 +17,7 @@ class LessonsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create lesson" do
     assert_difference('Lesson.count') do
-<<<<<<< HEAD
       post lessons_url, params: { lesson: { end_time: @lesson.end_time, lesson_type: @lesson.lesson_type, name: @lesson.name, start_time: @lesson.start_time, week_day: @lesson.week_day } }
-=======
-      post lessons_url, params: { lesson: { end_time: @lesson.end_time, lesson_type: @lesson.lesson_type, name: @lesson.name, school_year: @lesson.school_year, start_time: @lesson.start_time, teacher: @lesson.teacher, weekday: @lesson.weekday } }
->>>>>>> JoaoFerreira
     end
 
     assert_redirected_to lesson_url(Lesson.last)
@@ -38,11 +34,7 @@ class LessonsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update lesson" do
-<<<<<<< HEAD
     patch lesson_url(@lesson), params: { lesson: { end_time: @lesson.end_time, lesson_type: @lesson.lesson_type, name: @lesson.name, start_time: @lesson.start_time, week_day: @lesson.week_day } }
-=======
-    patch lesson_url(@lesson), params: { lesson: { end_time: @lesson.end_time, lesson_type: @lesson.lesson_type, name: @lesson.name, school_year: @lesson.school_year, start_time: @lesson.start_time, teacher: @lesson.teacher, weekday: @lesson.weekday } }
->>>>>>> JoaoFerreira
     assert_redirected_to lesson_url(@lesson)
   end
 
