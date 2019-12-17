@@ -17,8 +17,15 @@ class LessonsTest < ApplicationSystemTestCase
     fill_in "End time", with: @lesson.end_time
     fill_in "Lesson type", with: @lesson.lesson_type
     fill_in "Name", with: @lesson.name
+<<<<<<< HEAD
     fill_in "Start time", with: @lesson.start_time
     fill_in "Week day", with: @lesson.week_day
+=======
+    fill_in "School year", with: @lesson.school_year
+    fill_in "Start time", with: @lesson.start_time
+    fill_in "Teacher", with: @lesson.teacher
+    fill_in "Weekday", with: @lesson.weekday
+>>>>>>> JoaoFerreira
     click_on "Create Lesson"
 
     assert_text "Lesson was successfully created"
@@ -32,8 +39,15 @@ class LessonsTest < ApplicationSystemTestCase
     fill_in "End time", with: @lesson.end_time
     fill_in "Lesson type", with: @lesson.lesson_type
     fill_in "Name", with: @lesson.name
+<<<<<<< HEAD
     fill_in "Start time", with: @lesson.start_time
     fill_in "Week day", with: @lesson.week_day
+=======
+    fill_in "School year", with: @lesson.school_year
+    fill_in "Start time", with: @lesson.start_time
+    fill_in "Teacher", with: @lesson.teacher
+    fill_in "Weekday", with: @lesson.weekday
+>>>>>>> JoaoFerreira
     click_on "Update Lesson"
 
     assert_text "Lesson was successfully updated"

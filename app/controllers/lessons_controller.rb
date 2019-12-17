@@ -1,3 +1,4 @@
+    def lesson_params
 class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
 

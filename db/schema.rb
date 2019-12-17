@@ -10,15 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_12_17_174147) do
+=======
+ActiveRecord::Schema.define(version: 2019_12_17_154830) do
+>>>>>>> JoaoFerreira
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "lessons", force: :cascade do |t|
     t.string "name"
+<<<<<<< HEAD
     t.string "lesson_type"
     t.string "week_day"
+=======
+    t.string "teacher"
+    t.string "school_year"
+    t.string "lesson_type"
+    t.string "weekday"
+>>>>>>> JoaoFerreira
     t.time "start_time"
     t.time "end_time"
     t.datetime "created_at", null: false

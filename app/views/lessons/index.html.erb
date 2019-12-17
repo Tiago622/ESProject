@@ -6,8 +6,15 @@
   <thead>
     <tr>
       <th>Name</th>
+<<<<<<< HEAD
       <th>Lesson type</th>
       <th>Week day</th>
+=======
+      <th>Teacher</th>
+      <th>School year</th>
+      <th>Lesson type</th>
+      <th>Weekday</th>
+>>>>>>> JoaoFerreira
       <th>Start time</th>
       <th>End time</th>
       <th colspan="3"></th>
@@ -18,8 +25,15 @@
     <% @lessons.each do |lesson| %>
       <tr>
         <td><%= lesson.name %></td>
+<<<<<<< HEAD
         <td><%= lesson.lesson_type %></td>
         <td><%= lesson.week_day %></td>
+=======
+        <td><%= lesson.teacher %></td>
+        <td><%= lesson.school_year %></td>
+        <td><%= lesson.lesson_type %></td>
+        <td><%= lesson.weekday %></td>
+>>>>>>> JoaoFerreira
         <td><%= lesson.start_time %></td>
         <td><%= lesson.end_time %></td>
         <td><%= link_to 'Show', lesson %></td>
