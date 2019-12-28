@@ -2,14 +2,14 @@
 
 one:
   name: MyString
-  room_type: MyString
-  capacity: 1
-  equipment: MyString
+  type: 
+  capacity: MyString
   availability: false
+  equipment: MyString
 
 two:
   name: MyString
-  room_type: MyString
-  capacity: 1
-  equipment: MyString
+  type: 
+  capacity: MyString
   availability: false
+  equipment: MyString

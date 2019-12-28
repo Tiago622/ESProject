@@ -1,0 +1,2 @@
+class OrganicUnit < ApplicationRecord
+end

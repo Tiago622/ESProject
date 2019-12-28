@@ -18,7 +18,7 @@ class SpacesTest < ApplicationSystemTestCase
     fill_in "Capacity", with: @space.capacity
     fill_in "Equipment", with: @space.equipment
     fill_in "Name", with: @space.name
-    fill_in "Room type", with: @space.room_type
+    fill_in "Type", with: @space.type
     click_on "Create Space"
 
     assert_text "Space was successfully created"
@@ -33,7 +33,7 @@ class SpacesTest < ApplicationSystemTestCase
     fill_in "Capacity", with: @space.capacity
     fill_in "Equipment", with: @space.equipment
     fill_in "Name", with: @space.name
-    fill_in "Room type", with: @space.room_type
+    fill_in "Type", with: @space.type
     click_on "Update Space"
 
     assert_text "Space was successfully updated"

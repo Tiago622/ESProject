@@ -15,6 +15,7 @@ class CoursesTest < ApplicationSystemTestCase
     click_on "New Course"
 
     fill_in "Name", with: @course.name
+    fill_in "School", with: @course.school_id
     click_on "Create Course"
 
     assert_text "Course was successfully created"
@@ -26,6 +27,7 @@ class CoursesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Name", with: @course.name
+    fill_in "School", with: @course.school_id
     click_on "Update Course"
 
     assert_text "Course was successfully updated"
