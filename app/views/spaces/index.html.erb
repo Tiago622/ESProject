@@ -6,8 +6,9 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Type</th>
+      <th>Type of space</th>
       <th>Capacity</th>
+      <th>Description</th>
       <th>Availability</th>
       <th>Equipment</th>
       <th colspan="3"></th>
@@ -18,8 +19,9 @@
     <% @spaces.each do |space| %>
       <tr>
         <td><%= space.name %></td>
-        <td><%= space.type %></td>
+        <td><%= space.type_of_space %></td>
         <td><%= space.capacity %></td>
+        <td><%= space.description %></td>
         <td><%= space.availability %></td>
         <td><%= space.equipment %></td>
         <td><%= link_to 'Show', space %></td>
