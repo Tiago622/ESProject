@@ -26,7 +26,7 @@ def fromStringArrayOfObjectsToArrayOfObjects(colecao)
     rescue NoMethodError => e
        return
     end    
-    return cena
+    return colec
 
 end
 
