@@ -1,7 +1,7 @@
     require 'open-uri'
     require 'nokogiri'
     require 'json'
-        def fromStringArrayOfObjectsToArrayOfObjects(colecao)
+        def fromStringArrayOfObjectsToArrayOfObjects(colecao, letra)
             colec=[]
             n=0
             begin
@@ -15,7 +15,7 @@
                     description = entrada.split(",\"Nome\":\"")[1].split("\",\"FuncaoPT\":\"")[1]
                     #puts nome_sala 
                     #puts description
-                    cena= {:name=>nome_sala,:description=>description.split("\"")[0]}
+                    cena= {:name=>nome_sala,:description=>description.split("\"")[0]}#, :letter=>letra}
                     colec.push(cena)
                     puts cena
                     
@@ -43,7 +43,7 @@
                 doc = Nokogiri::HTML(open(url))
                 doc = doc.xpath('//p').to_s[3..-5]
                 puts doc
-                a = fromStringArrayOfObjectsToArrayOfObjects(doc)
+                a = fromStringArrayOfObjectsToArrayOfObjects(doc, letra)
                 lista_de_salas.push(a)
                 
             end
