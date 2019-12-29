@@ -1,15 +1,11 @@
-require 'ostruct'
-
-
 queue = ["SEGUNDA", "TERCA", "QUARTA", "QUINTA", "SEXTA"] #, "SABADO" #meter quando houve horarios com sabado
 
-stateObjects = OpenStruct.new
-stateObjects.SEGUNDA = []
-stateObjects.TERCA = []
-stateObjects.QUARTA = []
-stateObjects.QUINTA = []
-stateObjects.SEXTA = []
-stateObjects.SABADO = []
+segunda_array= []
+terca_array = []
+quarta_array = []
+quinta_array = []
+sexta_array = []
+sabado_array = []
 
 
 
@@ -37,23 +33,23 @@ queue.each do |ficheiro_dia_da_semana|
         hora_fim = hora_fim
         case (dia_s)
           when "SEGUNDA" 
-            stateObjects.SEGUNDA.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
-            puts "#{stateObjects.SEGUNDA}"
+            segunda_array.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            puts "#{segunda_array}"
           when "TERCA"
-            stateObjects.TERCA.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
-            puts "#{stateObjects.TERCA}"
+            terca_array.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            puts "#{terca_array}"
           when "QUARTA"
-            stateObjects.QUARTA.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
-            puts "#{stateObjects.QUARTA}"
+            quarta_array.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            puts "#{quarta_array}"
           when "QUINTA"
-            stateObjects.QUINTA.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
-            puts "#{stateObjects.QUINTA}"
+            quinta_array.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            puts "#{quinta_array}"
           when "SEXTA"
-            stateObjects.SEXTA.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
-            puts "#{stateObjects.SEXTA}"
+            sexta_array.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            puts "#{sexta_array}"
           when "SABADO"
-            stateObjects.SABADO.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
-            puts "#{stateObjects.SABADO}"
+            sabado_array.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            puts "#{sabado_array}"
         end
         
       elsif line_num %4 == 2
@@ -74,5 +70,15 @@ queue.each do |ficheiro_dia_da_semana|
    
       line_num += 1
      
+  end
+end
+
+arrays= [segunda_array,terca_array,quarta_array,quinta_array,sexta_array,sabado_array]
+
+arrays.each do |dia|
+  dia.each do |entrada|
+    
+    Entrada.create(entrada)
+
   end
 end
