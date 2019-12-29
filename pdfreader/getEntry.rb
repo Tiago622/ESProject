@@ -33,22 +33,22 @@ queue.each do |ficheiro_dia_da_semana|
         hora_fim = hora_fim
         case (dia_s)
           when "SEGUNDA" 
-            segunda_array.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            segunda_array.push({:tipo=> tipo, :dia_semana=>dia_s, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
             puts "#{segunda_array}"
           when "TERCA"
-            terca_array.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            terca_array.push({:tipo=> tipo, :dia_semana=>dia_s, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
             puts "#{terca_array}"
           when "QUARTA"
-            quarta_array.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            quarta_array.push({:tipo=> tipo, :dia_semana=>dia_s, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
             puts "#{quarta_array}"
           when "QUINTA"
-            quinta_array.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            quinta_array.push({:tipo=> tipo, :dia_semana=>dia_s, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
             puts "#{quinta_array}"
           when "SEXTA"
-            sexta_array.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            sexta_array.push({:tipo=> tipo, :dia_semana=>dia_s, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
             puts "#{sexta_array}"
           when "SABADO"
-            sabado_array.push({:tipo=> tipo, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            sabado_array.push({:tipo=> tipo, :dia_semana=>dia_s, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
             puts "#{sabado_array}"
         end
         
