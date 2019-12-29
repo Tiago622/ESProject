@@ -1,9 +1,6 @@
-
-#module Blog
-    #class PostsController < Blog::ApplicationController
-        require 'open-uri'
-        require 'nokogiri'
-        require 'json'
+    require 'open-uri'
+    require 'nokogiri'
+    require 'json'
         def fromStringArrayOfObjectsToArrayOfObjects(colecao)
             colec=[]
             n=0
@@ -18,7 +15,7 @@
                     description = entrada.split(",\"Nome\":\"")[1].split("\",\"FuncaoPT\":\"")[1]
                     #puts nome_sala 
                     #puts description
-                    cena= {:nome=>nome_sala,:description=>description.split("\"")[0]}
+                    cena= {:name=>nome_sala,:description=>description.split("\"")[0]}
                     colec.push(cena)
                     puts cena
                     
@@ -47,13 +44,13 @@
                 doc = doc.xpath('//p').to_s[3..-5]
                 puts doc
                 a = fromStringArrayOfObjectsToArrayOfObjects(doc)
-                #Space.create(a)
+                lista_de_salas.push(a)
                 
             end
         end
-        
+        lista_de_salas = lista_de_salas.uniq
         lista_de_salas.each do |sala|
-           # Space.create({:name=> sala.split(",")[0] , :description=>sala.split(",")[1]})
+           Space.create(sala)
         end
         
     #end
