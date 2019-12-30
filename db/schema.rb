@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_28_223523) do
+ActiveRecord::Schema.define(version: 2019_12_30_184112) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2019_12_28_223523) do
 
   create_table "spaces", force: :cascade do |t|
     t.string "name"
+    t.string "department"
     t.string "type_of_space"
     t.string "capacity"
     t.string "description"

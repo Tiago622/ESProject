@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :spaces
+  resources :spaces
   resources :people
   resources :disciplines
   resources :urls
