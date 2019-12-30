@@ -53,3 +53,4 @@ config/initializers/secret_token.rb
 
 ### Vagrant Patch ###
 *.box
+pdfreader/hmm.rb

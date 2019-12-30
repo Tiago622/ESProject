@@ -1,6 +1,8 @@
     require 'open-uri'
     require 'nokogiri'
     require 'json'
+    #require 'iconv'
+
         def fromStringArrayOfObjectsToArrayOfObjects(colecao, letra)
             colec=[]
             n=0
@@ -15,9 +17,14 @@
                     description = entrada.split(",\"Nome\":\"")[1].split("\",\"FuncaoPT\":\"")[1]
                     #puts nome_sala 
                     #puts description
+                    #nome_sala = iconv('utf-8','LATIN1', nome_sala.to_s)
+                    #description = iconv('utf-8','LATIN1', description.to_s)
+                    puts nome_sala
+                    puts description
                     cena= {:name=>nome_sala,:description=>description.split("\"")[0]}#, :letter=>letra}
+                    
                     colec.push(cena)
-                    puts cena
+                    #puts cena
                     
                     #puts entrada
                     #puts type(entrada)
@@ -42,7 +49,7 @@
                 puts url
                 doc = Nokogiri::HTML(open(url))
                 doc = doc.xpath('//p').to_s[3..-5]
-                puts doc
+                #puts doc
                 a = fromStringArrayOfObjectsToArrayOfObjects(doc, letra)
                 lista_de_salas.push(a)
                 
