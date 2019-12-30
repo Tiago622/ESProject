@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_30_184112) do
+ActiveRecord::Schema.define(version: 2019_12_30_193944) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,22 @@ ActiveRecord::Schema.define(version: 2019_12_30_184112) do
     t.index ["course_id"], name: "index_disciplines_on_course_id"
   end
 
+  create_table "lessons", force: :cascade do |t|
+    t.string "name"
+    t.string "type_of_lesson"
+    t.string "weekday"
+    t.time "start_time"
+    t.time "end_time"
+    t.bigint "space_id"
+    t.bigint "person_id"
+    t.bigint "discipline_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["discipline_id"], name: "index_lessons_on_discipline_id"
+    t.index ["person_id"], name: "index_lessons_on_person_id"
+    t.index ["space_id"], name: "index_lessons_on_space_id"
+  end
+
   create_table "organic_units", force: :cascade do |t|
     t.string "name"
     t.string "acronym"
@@ -42,6 +58,31 @@ ActiveRecord::Schema.define(version: 2019_12_30_184112) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.string "reason"
+    t.string "state"
+    t.date "date"
+    t.time "start_time"
+    t.time "end_time"
+    t.bigint "person_id"
+    t.bigint "space_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_reservations_on_person_id"
+    t.index ["space_id"], name: "index_reservations_on_space_id"
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.string "school_year"
+    t.string "year"
+    t.string "class"
+    t.integer "version"
+    t.bigint "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_schedules_on_course_id"
   end
 
   create_table "schools", force: :cascade do |t|
@@ -76,6 +117,12 @@ ActiveRecord::Schema.define(version: 2019_12_30_184112) do
 
   add_foreign_key "courses", "schools"
   add_foreign_key "disciplines", "courses"
+  add_foreign_key "lessons", "disciplines"
+  add_foreign_key "lessons", "people"
+  add_foreign_key "lessons", "spaces"
+  add_foreign_key "reservations", "people"
+  add_foreign_key "reservations", "spaces"
+  add_foreign_key "schedules", "courses"
   add_foreign_key "schools", "organic_units"
   add_foreign_key "urls", "courses"
 end

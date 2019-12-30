@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :reservations
+  resources :lessons
+  resources :schedules
   resources :spaces
   resources :spaces
   resources :people
