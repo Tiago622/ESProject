@@ -14,6 +14,7 @@ class DisciplinesTest < ApplicationSystemTestCase
     visit disciplines_url
     click_on "New Discipline"
 
+    fill_in "Course", with: @discipline.course_id
     fill_in "Name", with: @discipline.name
     click_on "Create Discipline"
 
@@ -25,6 +26,7 @@ class DisciplinesTest < ApplicationSystemTestCase
     visit disciplines_url
     click_on "Edit", match: :first
 
+    fill_in "Course", with: @discipline.course_id
     fill_in "Name", with: @discipline.name
     click_on "Update Discipline"
 

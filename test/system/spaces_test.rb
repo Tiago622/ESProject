@@ -16,9 +16,11 @@ class SpacesTest < ApplicationSystemTestCase
 
     check "Availability" if @space.availability
     fill_in "Capacity", with: @space.capacity
+    fill_in "Department", with: @space.department
+    fill_in "Description", with: @space.description
     fill_in "Equipment", with: @space.equipment
     fill_in "Name", with: @space.name
-    fill_in "Room type", with: @space.room_type
+    fill_in "Type of space", with: @space.type_of_space
     click_on "Create Space"
 
     assert_text "Space was successfully created"
@@ -31,9 +33,11 @@ class SpacesTest < ApplicationSystemTestCase
 
     check "Availability" if @space.availability
     fill_in "Capacity", with: @space.capacity
+    fill_in "Department", with: @space.department
+    fill_in "Description", with: @space.description
     fill_in "Equipment", with: @space.equipment
     fill_in "Name", with: @space.name
-    fill_in "Room type", with: @space.room_type
+    fill_in "Type of space", with: @space.type_of_space
     click_on "Update Space"
 
     assert_text "Space was successfully updated"

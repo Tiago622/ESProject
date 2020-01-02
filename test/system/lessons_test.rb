@@ -14,11 +14,14 @@ class LessonsTest < ApplicationSystemTestCase
     visit lessons_url
     click_on "New Lesson"
 
+    fill_in "Discipline", with: @lesson.discipline_id
     fill_in "End time", with: @lesson.end_time
-    fill_in "Lesson type", with: @lesson.lesson_type
     fill_in "Name", with: @lesson.name
+    fill_in "Person", with: @lesson.person_id
+    fill_in "Space", with: @lesson.space_id
     fill_in "Start time", with: @lesson.start_time
-    fill_in "Week day", with: @lesson.week_day
+    fill_in "Type of lesson", with: @lesson.type_of_lesson
+    fill_in "Weekday", with: @lesson.weekday
     click_on "Create Lesson"
 
     assert_text "Lesson was successfully created"
@@ -29,11 +32,14 @@ class LessonsTest < ApplicationSystemTestCase
     visit lessons_url
     click_on "Edit", match: :first
 
+    fill_in "Discipline", with: @lesson.discipline_id
     fill_in "End time", with: @lesson.end_time
-    fill_in "Lesson type", with: @lesson.lesson_type
     fill_in "Name", with: @lesson.name
+    fill_in "Person", with: @lesson.person_id
+    fill_in "Space", with: @lesson.space_id
     fill_in "Start time", with: @lesson.start_time
-    fill_in "Week day", with: @lesson.week_day
+    fill_in "Type of lesson", with: @lesson.type_of_lesson
+    fill_in "Weekday", with: @lesson.weekday
     click_on "Update Lesson"
 
     assert_text "Lesson was successfully updated"

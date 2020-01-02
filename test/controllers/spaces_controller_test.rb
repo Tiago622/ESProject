@@ -17,7 +17,7 @@ class SpacesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create space" do
     assert_difference('Space.count') do
-      post spaces_url, params: { space: { availability: @space.availability, capacity: @space.capacity, equipment: @space.equipment, name: @space.name, room_type: @space.room_type } }
+      post spaces_url, params: { space: { availability: @space.availability, capacity: @space.capacity, department: @space.department, description: @space.description, equipment: @space.equipment, name: @space.name, type_of_space: @space.type_of_space } }
     end
 
     assert_redirected_to space_url(Space.last)
@@ -34,7 +34,7 @@ class SpacesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update space" do
-    patch space_url(@space), params: { space: { availability: @space.availability, capacity: @space.capacity, equipment: @space.equipment, name: @space.name, room_type: @space.room_type } }
+    patch space_url(@space), params: { space: { availability: @space.availability, capacity: @space.capacity, department: @space.department, description: @space.description, equipment: @space.equipment, name: @space.name, type_of_space: @space.type_of_space } }
     assert_redirected_to space_url(@space)
   end
 

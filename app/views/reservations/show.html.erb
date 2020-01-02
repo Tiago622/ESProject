@@ -1,6 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Reason:</strong>
+  <%= @reservation.reason %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @reservation.state %>
+</p>
+
+<p>
   <strong>Date:</strong>
   <%= @reservation.date %>
 </p>
@@ -16,13 +26,13 @@
 </p>
 
 <p>
-  <strong>Reason:</strong>
-  <%= @reservation.reason %>
+  <strong>Person:</strong>
+  <%= @reservation.person %>
 </p>
 
 <p>
-  <strong>State:</strong>
-  <%= @reservation.state %>
+  <strong>Space:</strong>
+  <%= @reservation.space %>
 </p>
 
 <%= link_to 'Edit', edit_reservation_path(@reservation) %> |

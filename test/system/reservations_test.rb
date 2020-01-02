@@ -16,7 +16,9 @@ class ReservationsTest < ApplicationSystemTestCase
 
     fill_in "Date", with: @reservation.date
     fill_in "End time", with: @reservation.end_time
+    fill_in "Person", with: @reservation.person_id
     fill_in "Reason", with: @reservation.reason
+    fill_in "Space", with: @reservation.space_id
     fill_in "Start time", with: @reservation.start_time
     fill_in "State", with: @reservation.state
     click_on "Create Reservation"
@@ -31,7 +33,9 @@ class ReservationsTest < ApplicationSystemTestCase
 
     fill_in "Date", with: @reservation.date
     fill_in "End time", with: @reservation.end_time
+    fill_in "Person", with: @reservation.person_id
     fill_in "Reason", with: @reservation.reason
+    fill_in "Space", with: @reservation.space_id
     fill_in "Start time", with: @reservation.start_time
     fill_in "State", with: @reservation.state
     click_on "Update Reservation"

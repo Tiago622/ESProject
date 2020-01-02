@@ -6,8 +6,13 @@
 </p>
 
 <p>
-  <strong>Room type:</strong>
-  <%= @space.room_type %>
+  <strong>Department:</strong>
+  <%= @space.department %>
+</p>
+
+<p>
+  <strong>Type of space:</strong>
+  <%= @space.type_of_space %>
 </p>
 
 <p>
@@ -16,13 +21,18 @@
 </p>
 
 <p>
-  <strong>Equipment:</strong>
-  <%= @space.equipment %>
+  <strong>Description:</strong>
+  <%= @space.description %>
 </p>
 
 <p>
   <strong>Availability:</strong>
   <%= @space.availability %>
+</p>
+
+<p>
+  <strong>Equipment:</strong>
+  <%= @space.equipment %>
 </p>
 
 <%= link_to 'Edit', edit_space_path(@space) %> |

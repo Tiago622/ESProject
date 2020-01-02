@@ -12,6 +12,16 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :reason %>
+    <%= form.text_field :reason %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div class="field">
     <%= form.label :date %>
     <%= form.date_select :date %>
   </div>
@@ -27,13 +37,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :reason %>
-    <%= form.text_field :reason %>
+    <%= form.label :person_id %>
+    <%= form.text_field :person_id %>
   </div>
 
   <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state %>
+    <%= form.label :space_id %>
+    <%= form.text_field :space_id %>
   </div>
 
   <div class="actions">
