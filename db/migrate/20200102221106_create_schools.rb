@@ -4,7 +4,7 @@ class CreateSchools < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :acronym
       t.string :address
-      t.belongs_to :organic_unit, foreign_key: true
+      t.references :organic_unit, foreign_key: true
 
       t.timestamps
     end
