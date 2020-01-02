@@ -1,4 +1,4 @@
 class Person < ApplicationRecord
-    # has_one :reservation, dependent: :destroy
-    # has_one :lesson, dependent: :destroy
+    has_many :reservation, dependent: :destroy
+    has_many :lesson, dependent: :destroy
 end

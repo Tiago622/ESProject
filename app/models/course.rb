@@ -1,6 +1,6 @@
 class Course < ApplicationRecord
-  has_one :discipline, dependent: :destroy
-  has_one :url, dependent: :destroy
-  has_one :schedule, dependent: :destroy
+  has_many :discipline, dependent: :destroy
+  has_many :url, dependent: :destroy
+  has_many :schedule, dependent: :destroy
   belongs_to :school
 end
