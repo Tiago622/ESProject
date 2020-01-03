@@ -1,4 +1,5 @@
 class School < ApplicationRecord
+  has_many :courses, dependent: :destroy
   belongs_to :organic_unit
 
   validates :name, presence: true, length: {minimum: 5}
