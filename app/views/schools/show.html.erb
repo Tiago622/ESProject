@@ -17,7 +17,7 @@
 
 <p>
   <strong>Organic unit:</strong>
-  <%= @school.organic_unit %>
+  <%= @school.organic_unit.acronym %> - <%= @school.organic_unit.name %>
 </p>
 
 <%= link_to 'Edit', edit_school_path(@school) %> |
