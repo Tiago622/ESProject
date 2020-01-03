@@ -20,5 +20,14 @@
   <%= @school.organic_unit.acronym %> - <%= @school.organic_unit.name %>
 </p>
 
+<h5>Courses from this School</h5>
+
+<ul class="list-group list-group-horizontal">
+  <% @school.courses.each do |course| %>
+    <li class="list-group-item"><%= course.name %></li>
+  <% end %>
+</ul>  
+
+
 <%= link_to 'Edit', edit_school_path(@school) %> |
 <%= link_to 'Back', schools_path %>
