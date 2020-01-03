@@ -10,14 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_02_221106) do
+ActiveRecord::Schema.define(version: 2019_12_28_223523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "courses", force: :cascade do |t|
+    t.string "name"
+    t.bigint "school_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["school_id"], name: "index_courses_on_school_id"
+  end
+
+  create_table "disciplines", force: :cascade do |t|
+    t.string "name"
+    t.bigint "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_disciplines_on_course_id"
+  end
+
   create_table "organic_units", force: :cascade do |t|
     t.string "name"
     t.string "acronym"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "people", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -32,5 +54,27 @@ ActiveRecord::Schema.define(version: 2020_01_02_221106) do
     t.index ["organic_unit_id"], name: "index_schools_on_organic_unit_id"
   end
 
+  create_table "spaces", force: :cascade do |t|
+    t.string "name"
+    t.string "type_of_space"
+    t.string "capacity"
+    t.string "description"
+    t.boolean "availability"
+    t.string "equipment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "urls", force: :cascade do |t|
+    t.string "url"
+    t.bigint "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_urls_on_course_id"
+  end
+
+  add_foreign_key "courses", "schools"
+  add_foreign_key "disciplines", "courses"
   add_foreign_key "schools", "organic_units"
+  add_foreign_key "urls", "courses"
 end

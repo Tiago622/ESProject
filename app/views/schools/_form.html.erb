@@ -27,9 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :organic_unit_name %>
-    <% organic_units_array = OrganicUnit.all.map { |ou| [ou.name, ou.id] } %>
-    <%= collection_select(:school, :organic_unit_id, OrganicUnit.all, :id, :name) %>
+    <%= form.label :organic_unit_id %>
+    <%= form.text_field :organic_unit_id %>
   </div>
 
   <div class="actions">
