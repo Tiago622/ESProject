@@ -18,7 +18,6 @@
 
   <div class="field">
     <%= form.label :school_name %>
-    <% schools_array = School.all.map { |s| [s.name, s.id] } %>
     <%= collection_select(:course, :school_id, School.all, :id, :name) %>
   </div>
 

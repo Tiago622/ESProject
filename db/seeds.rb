@@ -22,3 +22,8 @@ Course.create([
     {name:'Licenciatura em Engenharia Informática', school_id:'3'},
     {name:'Licenciatura em Engenharia Eletrotécnica e de Computadores', school_id:'3'}
 ])
+
+Person.create([
+    {name:'Alice Maria Domingos Reis Henriques', phone:'249328112', extension:'1202', email:'alice.henriques@ipt.pt', cabinet:'Artes, Design e Comunicação', job_title_1: 'Técnica Superior, Área Pedagógica do GGP', job_title_2: '', job_title_3: ''},
+    {name:'Ana Catarina da Fonseca Henriques Freire', phone:'249 346 363', extension:'9172', email:'catarina.freire@ipt.pt', cabinet:'Gabinete de Relações Internacionais', job_title_1: 'Técnico Superior - GRI', job_title_2: '', job_title_3: ''}
+])

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :people
   resources :schedules
   #change root (home)
   #root to: 'controller#action'
