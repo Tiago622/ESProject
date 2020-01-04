@@ -7,8 +7,23 @@
 
 <p>
   <strong>School:</strong>
-  <%= @course.school.acronym %> - <%= @course.school.name %> 
+  <%= @course.school.name %> 
 </p>
+
+<p>
+  <strong>Organic Unit:</strong>
+  <%= @course.school.organic_unit.name %> 
+</p>
+
+<h5>Disciplines from this Course</h5>
+
+<ul class="list-group list-group-horizontal">
+  <% @course.disciplines.each do |discipline| %>
+    <li class="list-group-item">
+        <%= discipline.name %>
+    </li>
+  <% end %>
+</ul>  
 
 <h5>Urls from this Course</h3>
 

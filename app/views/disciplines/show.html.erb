@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @discipline.name %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @discipline.course.name %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @discipline.course.school.name %>
+</p>
+
+<p>
+  <strong>Organic Unit:</strong>
+  <%= @discipline.course.school.organic_unit.name %>
+</p>
+
+<%= link_to 'Edit', edit_discipline_path(@discipline) %> |
+<%= link_to 'Back', disciplines_path %>
