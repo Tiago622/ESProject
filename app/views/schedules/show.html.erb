@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>School year:</strong>
+  <%= @schedule.school_year %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @schedule.year %>
+</p>
+
+<p>
+  <strong>Schedule class:</strong>
+  <%= @schedule.schedule_class %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @schedule.version %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @schedule.course.name %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @schedule.course.school.name %>
+</p>
+
+<p>
+  <strong>Organic Unit:</strong>
+  <%= @schedule.course.school.organic_unit.name %>
+</p>
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>
