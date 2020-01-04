@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  
+  #change root (home)
+  #root to: 'controller#action'
+  
+  #single resource path example:
+  #get 'login', to: 'controller#action'
+  
   resources :disciplines
   resources :urls
   resources :courses
