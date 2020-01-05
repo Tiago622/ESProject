@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lesson:</strong>
+  <%= @lesson_schedule.lesson %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @lesson_schedule.schedule %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_schedule_path(@lesson_schedule) %> |
+<%= link_to 'Back', lesson_schedules_path %>

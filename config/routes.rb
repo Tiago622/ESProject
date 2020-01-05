@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :lesson_schedules
+  resources :lessons
   resources :people
   resources :schedules
   #change root (home)

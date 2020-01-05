@@ -1,4 +1,7 @@
 class Schedule < ApplicationRecord
+  has_many :lesson_schedules, dependent: :destroy
+  has_many :lessons, :through => :lesson_schedules, dependent: :destroy
+
   belongs_to :course
 
   #TO DO: Regex to validate years like 2019/2020

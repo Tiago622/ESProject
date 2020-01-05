@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lesson.name %>
+</p>
+
+<p>
+  <strong>Lesson type:</strong>
+  <%= @lesson.lesson_type %>
+</p>
+
+<p>
+  <strong>Week day:</strong>
+  <%= @lesson.week_day %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @lesson.start_time.strftime("%I:%M%p") %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @lesson.end_time.strftime("%I:%M%p") %>
+</p>
+
+<p>
+  <strong>Discipline:</strong>
+  <%= @lesson.discipline.name %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @lesson.person.name %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  lesson_type: MyString
+  week_day: MyString
+  start_time: 2020-01-05 16:23:05
+  end_time: 2020-01-05 16:23:05
+  discipline: one
+  person: one
+
+two:
+  name: MyString
+  lesson_type: MyString
+  week_day: MyString
+  start_time: 2020-01-05 16:23:05
+  end_time: 2020-01-05 16:23:05
+  discipline: two
+  person: two

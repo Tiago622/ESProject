@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_04_163110) do
+ActiveRecord::Schema.define(version: 2020_01_05_162318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,29 @@ ActiveRecord::Schema.define(version: 2020_01_04_163110) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_disciplines_on_course_id"
+  end
+
+  create_table "lesson_schedules", force: :cascade do |t|
+    t.bigint "lesson_id"
+    t.bigint "schedule_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_lesson_schedules_on_lesson_id"
+    t.index ["schedule_id"], name: "index_lesson_schedules_on_schedule_id"
+  end
+
+  create_table "lessons", force: :cascade do |t|
+    t.string "name"
+    t.string "lesson_type"
+    t.string "week_day"
+    t.time "start_time"
+    t.time "end_time"
+    t.bigint "discipline_id"
+    t.bigint "person_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["discipline_id"], name: "index_lessons_on_discipline_id"
+    t.index ["person_id"], name: "index_lessons_on_person_id"
   end
 
   create_table "organic_units", force: :cascade do |t|
@@ -82,6 +105,10 @@ ActiveRecord::Schema.define(version: 2020_01_04_163110) do
 
   add_foreign_key "courses", "schools"
   add_foreign_key "disciplines", "courses"
+  add_foreign_key "lesson_schedules", "lessons"
+  add_foreign_key "lesson_schedules", "schedules"
+  add_foreign_key "lessons", "disciplines"
+  add_foreign_key "lessons", "people"
   add_foreign_key "schedules", "courses"
   add_foreign_key "schools", "organic_units"
   add_foreign_key "urls", "courses"
