@@ -1,6 +1,6 @@
 require 'csv'
 
-ficheiro = File.read("pessoas.csv")
+ficheiro = File.read(Rails.root+"pdfreader/pessoas.csv")
 
 table = CSV.parse(ficheiro, headers: true)
 
