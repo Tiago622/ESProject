@@ -2,20 +2,18 @@
 
 one:
   name: MyString
-  type_of_lesson: MyString
-  weekday: MyString
-  start_time: 2019-12-30 19:23:44
-  end_time: 2019-12-30 19:23:44
-  space: one
-  person: one
+  lesson_type: MyString
+  week_day: MyString
+  start_time: 2020-01-05 16:23:05
+  end_time: 2020-01-05 16:23:05
   discipline: one
+  person: one
 
 two:
   name: MyString
-  type_of_lesson: MyString
-  weekday: MyString
-  start_time: 2019-12-30 19:23:44
-  end_time: 2019-12-30 19:23:44
-  space: two
-  person: two
+  lesson_type: MyString
+  week_day: MyString
+  start_time: 2020-01-05 16:23:05
+  end_time: 2020-01-05 16:23:05
   discipline: two
+  person: two

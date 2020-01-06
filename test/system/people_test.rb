@@ -14,7 +14,14 @@ class PeopleTest < ApplicationSystemTestCase
     visit people_url
     click_on "New Person"
 
+    fill_in "Cabinet", with: @person.cabinet
+    fill_in "Email", with: @person.email
+    fill_in "Extension", with: @person.extension
+    fill_in "Job title 1", with: @person.job_title_1
+    fill_in "Job title 2", with: @person.job_title_2
+    fill_in "Job title 3", with: @person.job_title_3
     fill_in "Name", with: @person.name
+    fill_in "Phone", with: @person.phone
     click_on "Create Person"
 
     assert_text "Person was successfully created"
@@ -25,7 +32,14 @@ class PeopleTest < ApplicationSystemTestCase
     visit people_url
     click_on "Edit", match: :first
 
+    fill_in "Cabinet", with: @person.cabinet
+    fill_in "Email", with: @person.email
+    fill_in "Extension", with: @person.extension
+    fill_in "Job title 1", with: @person.job_title_1
+    fill_in "Job title 2", with: @person.job_title_2
+    fill_in "Job title 3", with: @person.job_title_3
     fill_in "Name", with: @person.name
+    fill_in "Phone", with: @person.phone
     click_on "Update Person"
 
     assert_text "Person was successfully updated"

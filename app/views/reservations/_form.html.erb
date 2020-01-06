@@ -37,13 +37,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :person_id %>
-    <%= form.text_field :person_id %>
+    <%= form.label :person_name %>
+    <%= collection_select(:reservation, :person_id, Person.all, :id, :name) %>
   </div>
 
   <div class="field">
-    <%= form.label :space_id %>
-    <%= form.text_field :space_id %>
+    <%= form.label :space_name %>
+    <%= collection_select(:reservation, :space_id, Space.all, :id, :name) %>
   </div>
 
   <div class="actions">

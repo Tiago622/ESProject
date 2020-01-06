@@ -2,12 +2,12 @@
 
 <h1>Courses</h1>
 
-<table>
-  <thead>
+<table class="table table-hover">
+  <thead class="thead-dark">
     <tr>
-      <th>Name</th>
-      <th>School</th>
-      <th colspan="3"></th>
+      <th scope="col">Course name</th>
+      <th scope="col">School</th>
+      <th scope="col" colspan="3">Option</th>
     </tr>
   </thead>
 
@@ -15,7 +15,7 @@
     <% @courses.each do |course| %>
       <tr>
         <td><%= course.name %></td>
-        <td><%= course.school %></td>
+        <td><%= course.school.name %></td>
         <td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -22,20 +22,20 @@
   </div>
 
   <div class="field">
-    <%= form.label :class %>
-    <%= form.text_field :class %>
+    <%= form.label :schedule_class %>
+    <%= form.text_field :schedule_class %>
   </div>
 
   <div class="field">
     <%= form.label :version %>
-    <%= form.number_field :version %>
+    <%= form.text_field :version %>
   </div>
 
   <div class="field">
-    <%= form.label :course_id %>
-    <%= form.text_field :course_id %>
+    <%= form.label :course_name %>
+    <%= collection_select(:schedule, :course_id, Course.all, :id, :name) %>
   </div>
-
+  
   <div class="actions">
     <%= form.submit %>
   </div>

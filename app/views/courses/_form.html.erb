@@ -17,8 +17,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :school_id %>
-    <%= form.text_field :school_id %>
+    <%= form.label :school_name %>
+    <%= collection_select(:course, :school_id, School.all, :id, :name) %>
   </div>
 
   <div class="actions">

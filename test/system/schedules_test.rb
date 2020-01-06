@@ -14,8 +14,8 @@ class SchedulesTest < ApplicationSystemTestCase
     visit schedules_url
     click_on "New Schedule"
 
-    fill_in "Class", with: @schedule.class
     fill_in "Course", with: @schedule.course_id
+    fill_in "Schedule class", with: @schedule.schedule_class
     fill_in "School year", with: @schedule.school_year
     fill_in "Version", with: @schedule.version
     fill_in "Year", with: @schedule.year
@@ -29,8 +29,8 @@ class SchedulesTest < ApplicationSystemTestCase
     visit schedules_url
     click_on "Edit", match: :first
 
-    fill_in "Class", with: @schedule.class
     fill_in "Course", with: @schedule.course_id
+    fill_in "Schedule class", with: @schedule.schedule_class
     fill_in "School year", with: @schedule.school_year
     fill_in "Version", with: @schedule.version
     fill_in "Year", with: @schedule.year

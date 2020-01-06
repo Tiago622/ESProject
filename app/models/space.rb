@@ -1,4 +1,4 @@
 class Space < ApplicationRecord
-    has_many :reservation, dependent: :destroy
-    has_many :lesson, dependent: :destroy
+    has_many :lessons, dependent: :destroy
+    has_many :reservations, dependent: :destroy
 end

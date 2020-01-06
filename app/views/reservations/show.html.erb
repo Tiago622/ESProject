@@ -27,12 +27,12 @@
 
 <p>
   <strong>Person:</strong>
-  <%= @reservation.person %>
+  <%= @reservation.person.name %>
 </p>
 
 <p>
   <strong>Space:</strong>
-  <%= @reservation.space %>
+  <%= @reservation.space.name %>
 </p>
 
 <%= link_to 'Edit', edit_reservation_path(@reservation) %> |

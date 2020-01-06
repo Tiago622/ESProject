@@ -3,13 +3,13 @@
 one:
   school_year: MyString
   year: MyString
-  class: MyString
-  version: 1
+  schedule_class: MyString
+  version: MyString
   course: one
 
 two:
   school_year: MyString
   year: MyString
-  class: MyString
-  version: 1
+  schedule_class: MyString
+  version: MyString
   course: two

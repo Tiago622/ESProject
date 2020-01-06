@@ -6,38 +6,33 @@
 </p>
 
 <p>
-  <strong>Type of lesson:</strong>
-  <%= @lesson.type_of_lesson %>
+  <strong>Lesson type:</strong>
+  <%= @lesson.lesson_type %>
 </p>
 
 <p>
-  <strong>Weekday:</strong>
-  <%= @lesson.weekday %>
+  <strong>Week day:</strong>
+  <%= @lesson.week_day %>
 </p>
 
 <p>
   <strong>Start time:</strong>
-  <%= @lesson.start_time %>
+  <%= @lesson.start_time.strftime("%I:%M%p") %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @lesson.end_time %>
-</p>
-
-<p>
-  <strong>Space:</strong>
-  <%= @lesson.space %>
-</p>
-
-<p>
-  <strong>Person:</strong>
-  <%= @lesson.person %>
+  <%= @lesson.end_time.strftime("%I:%M%p") %>
 </p>
 
 <p>
   <strong>Discipline:</strong>
-  <%= @lesson.discipline %>
+  <%= @lesson.discipline.name %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @lesson.person.name %>
 </p>
 
 <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
