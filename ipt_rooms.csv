@@ -1,0 +1,396 @@
+﻿ID,Nome,FuncaoPT,FuncaoFR,FuncaoEN
+20,A101,Serviços,Bureaus,Offices
+21,A102,Serviços,Bureaus,Offices
+22,A103,Serviços,Bureaus,Offices
+23,A104,Serviços,Bureaus,Offices
+24,A105,Serviços,Bureaus,Offices
+25,A106,Serviços,Bureaus,Offices
+26,A107,Serviços,Bureaus,Offices
+6,A109,Secretaria dos Serviços Académicos,Bureau d'étudiants,Students' Secretariat
+27,A112,Serviços,Bureaus,Offices
+28,A114,Serviços,Bureaus,Offices
+29,A115,Serviços,Bureaus,Offices
+30,A125,Serviços,Bureaus,Offices
+31,A126,Serviços,Bureaus,Offices
+32,A141,Auditório Professor Pacheco de Amorim,Auditorium,Auditorium
+33,A155,Arrumos,Stockage,Storage
+34,A207,Serviços,Bureaus,Offices
+35,A208,Serviços,Bureaus,Offices
+36,A209,Serviços,Bureaus,Offices
+37,A211,Centro de Informática e Sistemas (CIS),Centre informatique,Computer Center
+14,A212,Centro de Informática e Sistemas (CIS),Centre informatique,Computer Center
+38,A216,Centro de Informática e Sistemas (CIS),Centre informatique,Computer Center
+39,A248,Gabinete de Recursos Audiovisuais (GRAV),GRAV,GRAV
+55,B116,Erasmus,Erasmus,Erasmus
+57,B121,Auditório,Auditorium,Auditorium
+62,B131,Sala de aulas,Salle de Classe,Classroom
+64,B133,Sala de aulas,Salle de Classe,Classroom
+17,B141,Centro de Línguas do IPT,Centre de langues,Language Center
+16,B142,Reprografia,Salle de photocopieur,Photocopy machine room
+19,B143,Loja do IPT,Magasin du IPT,IPT's store
+68,B151,Secretariado Unidades Departamentais,Secrétariat,Secretariat
+5,B250,Tesouraria (IPT),Trésorerie (IPT),Treasure house (IPT)
+8,Biblioteca,Biblioteca,Bibliothèque,Library
+303,G174A,Laboratório de Pintura e Escultura,Laboratoire,Laboratory
+308,G179A,Casa de Banho,Toilettes,WC
+320,G190A,Estúdio,Photographie Laboratoire,Photo Laboratory
+18,GAPE,Gabinete de Apoio ao Estudante,Bureau de support aux étudiants,Student Support Office
+333,H171,ARTEC,ARTEC,ARTEC
+143,I173,Laboratório Vida Ativa,VITA Lab,VITA Laboratory
+1,I215,Secretariados Licenciaturas + TeSPs (ESTT),Secrétaire d'Degrees (ESTT),Bachelor's Degree Secretary (ESTT)
+355,J132,Armazém,Entrepôt,Warehouse
+367,J176A,Armazém,Entrepôt,Warehouse
+368,J176B,Armazém,Entrepôt,Warehouse
+179,J202,Secretariado Unidades Departamentais,Secrétariat,Secretariat
+401,L181,Armazém,Entrepôt,Warehouse
+403,L202,Secretariado Lab.IPT,Secrétariat du Lab.IPT,Lab.IPT Secretariat
+416,L215,Sala de Reuniões,Salle de réunion,Meeting room
+201,O106,Auditório Dr. Júlio Dias das Neves,Auditorium,Auditorium
+202,O106-piso2,Auditório Dr. Júlio Dias das Neves,Auditorium,Auditorium
+3,O218,Secretariados dos cursos (ESGT),Secrétaire d'Degrees (ESGT),Bachelor's Degree Secretary (ESGT)
+10,Refeitório,Refeitório,Cantine ,Canteen
+13,SAS-IPT,Serviços de Ação Social do IPT,Services sociales,IPT Social Services
+11,Snack-Bar,Snack-Bar,Snack-Bar,Snack-Bar
+235,Arrumos,Arrumos (Edifício Principal),Stockage,Storage
+238,Auditório,Auditório,Auditoire,Auditorium
+9,Biblioteca,Biblioteca,Bibliothèque,Library
+243,GAP,GAP,GAP,GAP
+251,Receção,Receção,Réception,Reception
+12,Refeitório,Refeitório + Snack-bar,Cantine  + Snack-bar,Canteen + Snack-bar
+253,Sala 1,Salas de Aula,Salles de Classe,Classrooms
+254,Sala 2,Salas de Aula,Salles de Classe,Classrooms
+255,Sala 3,Salas de Aula,Salles de Classe,Classrooms
+258,Sala de Reuniões,Sala de Reuniões,Salle de conférence,Meeting Room
+260,Sala Inf 1,Laboratório Informática,Laboratoire Informatique,Computing Laboratory
+261,Sala Inf 2,Laboratório Informática,Laboratoire Informatique,Computing Laboratory
+4,Secretariado,Secretariado,Secrétariat,Secretariat
+7,Serviços Administrativos,Serviços Administrativos,Services Administratifs,Administration Services
+265,WC - H (1º Andar),Casa de Banho,Toilettes,WC
+270,WC - S (1º Andar),Casa de Banho,Toilettes,WC
+40,B101,Gabinete Docentes,Bureau Enseignants,Professor's Office
+41,B102,Gabinete Docentes,Bureau Enseignants,Professor's Office
+42,B103,Gabinete Docentes,Bureau Enseignants,Professor's Office
+43,B104,Gabinete Docentes,Bureau Enseignants,Professor's Office
+44,B105,Gabinete Docentes,Bureau Enseignants,Professor's Office
+45,B106,Gabinete Docentes,Bureau Enseignants,Professor's Office
+46,B107,Gabinete Docentes,Bureau Enseignants,Professor's Office
+47,B108,Gabinete Docentes,Bureau Enseignants,Professor's Office
+48,B109,Gabinete Docentes,Bureau Enseignants,Professor's Office
+49,B110,Gabinete Docentes,Bureau Enseignants,Professor's Office
+50,B111,Gabinete Docentes,Bureau Enseignants,Professor's Office
+51,B112,Gabinete Docentes,Bureau Enseignants,Professor's Office
+52,B113,Gabinete Docentes,Bureau Enseignants,Professor's Office
+53,B114,Gabinete Docentes,Bureau Enseignants,Professor's Office
+54,B115,Sala de Reuniões,Salle de réunion,Meeting room
+56,B118,Arrumos,Stockage,Storage
+58,B126,Laboratório de Fotografia,Photographie Laboratoire,Photo Laboratory
+59,B128,Laboratório Informática,Laboratoire Informatique,Computing Laboratory
+60,B129,Sala de aulas,Salle de Classe,Classroom
+61,B130,Laboratório Informática,Laboratoire Informatique,Computing Laboratory
+63,B132,Laboratório de Fotografia,Photographie Laboratoire,Photo Laboratory
+65,B133,Casa de Banho,Toilettes,WC
+66,B134,Casa de Banho,Toilettes,WC
+67,B135,Laboratório Informática,Laboratoire Informatique,Computing Laboratory
+69,B173,Gabinete Docentes,Bureau Enseignants,Professor's Office
+70,B174,Gabinete Docentes,Bureau Enseignants,Professor's Office
+71,B175,Gabinete Docentes,Bureau Enseignants,Professor's Office
+72,B176,Gabinete Docentes,Bureau Enseignants,Professor's Office
+73,B177,Gabinete Docentes,Bureau Enseignants,Professor's Office
+74,B178,Gabinete Docentes,Bureau Enseignants,Professor's Office
+75,B179,Gabinete Docentes,Bureau Enseignants,Professor's Office
+76,B180,Gabinete Docentes,Bureau Enseignants,Professor's Office
+77,B181,Gabinete Docentes,Bureau Enseignants,Professor's Office
+78,B182,Gabinete Docentes,Bureau Enseignants,Professor's Office
+79,B183,Gabinete Docentes,Bureau Enseignants,Professor's Office
+80,B184,Gabinete Docentes,Bureau Enseignants,Professor's Office
+81,B187,Gabinete Docentes,Bureau Enseignants,Professor's Office
+82,B188,Gabinete Docentes,Bureau Enseignants,Professor's Office
+83,B189,Gabinete Docentes,Bureau Enseignants,Professor's Office
+84,B190,Gabinete Docentes,Bureau Enseignants,Professor's Office
+85,B191,Gabinete Docentes,Bureau Enseignants,Professor's Office
+86,B230,Casa de Banho,Toilettes,WC
+87,B231,Casa de Banho,Toilettes,WC
+88,B232,Casa de Banho,Toilettes,WC
+89,B233,Casa de Banho,Toilettes,WC
+90,B234,Arrumos,Stockage,Storage
+91,B251,Serviços,Bureaus,Offices
+92,B252,Gabinete de Relações Internacionais (GRI),GRI,GRI
+93,B253,Sala de Aula,Salle de Classe,Classroom
+94,B254,Sala de Aula,Salle de Classe,Classroom
+95,B255,Sala de Aula,Salle de Classe,Classroom
+96,B256,Sala de Aula,Salle de Classe,Classroom
+97,B257,Sala de Aula,Salle de Classe,Classroom
+98,B258,Sala de Aula,Salle de Classe,Classroom
+99,B259,Sala de Aula,Salle de Classe,Classroom
+100,B260,Sala de Aula,Salle de Classe,Classroom
+101,B261,Sala de Aula,Salle de Classe,Classroom
+102,B262,Sala de Aula,Salle de Classe,Classroom
+103,B263,Sala de Aula,Salle de Classe,Classroom
+104,B264,Sala de Aula,Salle de Classe,Classroom
+105,B265,Sala de Aula,Salle de Classe,Classroom
+106,B266,Sala de Aula,Salle de Classe,Classroom
+107,B267,Sala de Aula,Salle de Classe,Classroom
+108,B268,Sala de Aula,Salle de Classe,Classroom
+109,B269,Sala de Aula,Salle de Classe,Classroom
+110,B276,Serviços,Bureaus,Offices
+291,G130,Casa de Banho,Toilettes,WC
+294,G133,Casa de Banho,Toilettes,WC
+295,G134,Casa de Banho,Toilettes,WC
+325,H130,Casa de Banho,Toilettes,WC
+326,H131,Casa de Banho,Toilettes,WC
+327,H132,Casa de Banho,Toilettes,WC
+328,H133,Casa de Banho,Toilettes,WC
+329,H134,Casa de Banho,Toilettes,WC
+132,I130,Casa de Banho,Toilettes,WC
+133,I131,Casa de Banho,Toilettes,WC
+134,I132,Casa de Banho,Toilettes,WC
+353,J130,Casa de Banho,Toilettes,WC
+354,J131,Casa de Banho,Toilettes,WC
+356,J133,Casa de Banho,Toilettes,WC
+357,J134,Casa de Banho,Toilettes,WC
+386,L133,Casa de Banho,Toilettes,WC
+387,L134,Casa de Banho,Toilettes,WC
+203,O109,Casa de Banho,Toilettes,WC
+204,O110,Casa de Banho,Toilettes,WC
+205,O111,Casa de Banho,Toilettes,WC
+223,Q130,Casa de Banho,Toilettes,WC
+224,Q131,Casa de Banho,Toilettes,WC
+225,Q132,Casa de Banho,Toilettes,WC
+233,WC - H,Casa de Banho,Toilettes,WC
+234,WC - S,Casa de Banho,Toilettes,WC
+15,CIS,Centro de Informática e Sistemas (CIS),Centre informatique,Computer Center
+269,WC - H (R/Ch),Casa de Banho,Toilettes,WC
+272,WC - S (R/Ch),Casa de Banho,Toilettes,WC
+140,I170,NEEIT,NEEIT,NEEIT
+292,G131,Armazém,Entrepôt,Warehouse
+293,G132,Armazém,Entrepôt,Warehouse
+296,G150,Sala de aulas,Salle de Classe,Classroom
+297,G151,Laboratório Documentos Gráficos,Laboratoire,Laboratory
+298,G170,Laboratório Materiais Cerâmicos,Laboratoire,Laboratory
+299,G171,Laboratório Materias Pétreos,Laboratoire,Laboratory
+300,G172,Sala de aulas,Salle de Classe,Classroom
+301,G173,Laboratório de Pintura e Escultura,Laboratoire,Laboratory
+302,G174,Laboratório de Pintura e Escultura,Laboratoire,Laboratory
+304,G176,Laboratório de Pintura e Escultura,Laboratoire,Laboratory
+305,G177,Armazém,Entrepôt,Warehouse
+306,G178,Laboratório de Pintura e Escultura,Laboratoire,Laboratory
+307,G179,Gabinete,Bureau,Office
+309,G180,Laboratório de Desinfestação,Laboratoire,Laboratory
+310,G181,Laboratório de Física,Laboratoire,Laboratory
+311,G182,Laboratório de Química,Laboratoire,Laboratory
+312,G183,Laboratório de Química,Laboratoire,Laboratory
+313,G184,Laboratório Materiais Cerâmicos,Laboratoire,Laboratory
+314,G185,Sala de Acabamentos,Photographie Laboratoire,Photo Laboratory
+315,G186,Armazém,Entrepôt,Warehouse
+316,G187,Sala de Ampliação,Photographie Laboratoire,Photo Laboratory
+317,G188,Sala de Ampliação,Photographie Laboratoire,Photo Laboratory
+318,G189,Sala de Revelação,Photographie Laboratoire,Photo Laboratory
+319,G190,Laboratório de Fotografia,Photographie Laboratoire,Photo Laboratory
+321,G191,Laboratório de Madeiras,Laboratoire,Laboratory
+322,G192,Laboratório de Madeiras,Laboratoire,Laboratory
+323,G193,Laboratório de Madeiras,Laboratoire,Laboratory
+324,G194,Laboratório de Madeiras,Laboratoire,Laboratory
+273,G201,Gabinete Docentes,Bureau Enseignants,Professor's Office
+274,G202,Gabinete Docentes,Bureau Enseignants,Professor's Office
+275,G203,Gabinete Docentes,Bureau Enseignants,Professor's Office
+276,G204,Gabinete Docentes,Bureau Enseignants,Professor's Office
+277,G205,Gabinete Docentes,Bureau Enseignants,Professor's Office
+278,G206,Gabinete Docentes,Bureau Enseignants,Professor's Office
+279,G207,Gabinete Docentes,Bureau Enseignants,Professor's Office
+280,G208,Gabinete Docentes,Bureau Enseignants,Professor's Office
+281,G209,Gabinete Docentes,Bureau Enseignants,Professor's Office
+282,G210,Gabinete Docentes,Bureau Enseignants,Professor's Office
+283,G211,Gabinete Docentes,Bureau Enseignants,Professor's Office
+284,G212,Gabinete Docentes,Bureau Enseignants,Professor's Office
+285,G213,Gabinete Docentes,Bureau Enseignants,Professor's Office
+286,G214,Gabinete Docentes,Bureau Enseignants,Professor's Office
+287,G215,Gabinete Docentes,Bureau Enseignants,Professor's Office
+288,G216,Gabinete Docentes,Bureau Enseignants,Professor's Office
+289,G217,Gabinete Docentes,Bureau Enseignants,Professor's Office
+290,G218,Gabinete Docentes,Bureau Enseignants,Professor's Office
+330,H150,Sala de Aula,Salle de Classe,Classroom
+331,H151,Sala de Aula,Salle de Classe,Classroom
+332,H170,Sala de Apoio,Bureau,Office
+334,H172,Armazém,Entrepôt,Warehouse
+335,H173,Sala de Aula,Salle de Classe,Classroom
+336,H174,Sala de Aula,Salle de Classe,Classroom
+337,H175,Sala de Aula,Salle de Classe,Classroom
+338,H176,Laboratório Composição,Laboratoire,Laboratory
+339,H177,Laboratório,Laboratoire,Laboratory
+340,H178,Laboratório,Laboratoire,Laboratory
+341,H179,Laboratório,Laboratoire,Laboratory
+342,H180,Sala de Montagem,Laboratoire,Laboratory
+343,H181,Câmara Escura,Laboratoire,Laboratory
+344,H182,Laboratório de Encadernação,Laboratoire,Laboratory
+345,H183,Laboratório Off-Set,Laboratoire,Laboratory
+346,H184,Laboratório de Encadernação,Laboratoire,Laboratory
+347,H185,Laboratório de Serigrafia,Laboratoire,Laboratory
+348,H186,Laboratório de Serigrafia,Laboratoire,Laboratory
+349,H187,Laboratório,Laboratoire,Laboratory
+350,H188,Laboratório,Laboratoire,Laboratory
+351,H189,Laboratório,Laboratoire,Laboratory
+352,H190,Atelier de Pintura 1,Laboratoire,Laboratory
+111,H201,Gabinete Docentes,Bureau Enseignants,Professor's Office
+112,H202,Gabinete Docentes,Bureau Enseignants,Professor's Office
+113,H203,Gabinete Docentes,Bureau Enseignants,Professor's Office
+114,H204,Gabinete Docentes,Bureau Enseignants,Professor's Office
+115,H205,Gabinete Docentes,Bureau Enseignants,Professor's Office
+116,H206,Gabinete Docentes,Bureau Enseignants,Professor's Office
+117,H207,Gabinete Docentes,Bureau Enseignants,Professor's Office
+118,H208,Gabinete Docentes,Bureau Enseignants,Professor's Office
+119,H209,Gabinete Docentes,Bureau Enseignants,Professor's Office
+120,H210,Gabinete Docentes,Bureau Enseignants,Professor's Office
+121,H211,Gabinete Docentes,Bureau Enseignants,Professor's Office
+122,H212,Gabinete Docentes,Bureau Enseignants,Professor's Office
+123,H213,Gabinete Docentes,Bureau Enseignants,Professor's Office
+124,H214,Gabinete Docentes,Bureau Enseignants,Professor's Office
+125,H215,Sala de Reuniões,Salle de réunion,Meeting room
+126,H216,Gabinete Docentes,Bureau Enseignants,Professor's Office
+127,H217,Gabinete Docentes,Bureau Enseignants,Professor's Office
+128,H218,Arrumos,Stockage,Storage
+129,I101,Arrumos,Stockage,Storage
+130,I102,Laboratório de Projeto (B-LEI),Laboratoire de Projet,Project Lab
+131,I103,Laboratório de Projeto (B-LEI),Laboratoire de Projet,Project Lab
+135,I150,Laboratório Informática Industrial,Laboratoire Informatique Industrielle,Industrial Computing Laboratory
+136,I151,Laboratório Informática,Laboratoire Informatique,Computing Laboratory
+137,I152,Sala de Aula,Salle de Classe,Classroom
+138,I153,Laboratório de Redes,Laboratoire Réseau,Networking Laboratory
+139,I154,Laboratório Informática,Laboratoire Informatique,Computing Laboratory
+141,I171,Gabinete Docentes,Bureau Enseignants,Professor's Office
+142,I172,Laboratório Placas Circuito Impresso,Laboratoire de Circuits Imprimés,Laboratory Printed Circuit Boards
+144,I174,Laboratório de Automação,Laboratoire d'automatisation,Automation Laboratory
+145,I175,Laboratório de Controlo e Sistemas,Laboratoire de contrôle et des systèmes,Control and Systems Laboratory
+146,I176,Laboratório de Controlo e Sistemas,Laboratoire de contrôle et des systèmes,Control and Systems Laboratory
+147,I177,Armazém,Entrepôt,Warehouse
+148,I178,Laboratório de Projeto (A-LEI),Laboratoire de Projet,Project Lab
+149,I179,Gabinete Docentes,Bureau Enseignants,Professor's Office
+150,I180,Sala de Estudo,Salle d'étude,Study room
+151,I181,Laboratório de Apoio Automação,Automatisation de Laboratoire de Soutien,Laboratory Automation Support
+152,I182,Laboratório de Máquinas,Machines de Laboratoire,Machines Laboratory
+153,I183,Laboratório de Energia e Instalações,Laboratoire et équipements de l'énergie,Energy Laboratory and Facilities
+154,I184,Laboratório de Electrónica,Laboratoire Electronique,Electronics Laboratory
+155,I185,Laboratório de Tracção Eléctrica,Laboratoire de traction électrique,Electric Traction Laboratory
+156,I186,Laboratório de Tracção Eléctrica,Laboratoire de traction électrique,Eletric Traction Laboratory
+157,I187,Oficina,Atelier,Factory
+158,I188,Laboratório,Laboratoire,Laboratory
+159,I189,Laboratório de Projeto (LEEC),Laboratoire de Projet,Project Lab
+160,I190,Laboratório de Projeto (LEEC),Laboratoire de Projet,Project Lab
+161,I192,Laboratório,Laboratoire,Laboratory
+162,I201,Sala de Fotocopiadoras,Salle de photocopieur,Photocopy machine room
+2,I202,Secretariado de Mestrados (ESTT),Secrétariat de Maîtres (ESTT),Master's Office (ESTT)
+163,I203,Gabinete Docentes,Bureau Enseignants,Professor's Office
+164,I204,Gabinete Docentes,Bureau Enseignants,Professor's Office
+165,I205,Gabinete Docentes,Bureau Enseignants,Professor's Office
+166,I206,Gabinete Docentes,Bureau Enseignants,Professor's Office
+167,I207,Gabinete Docentes,Bureau Enseignants,Professor's Office
+168,I208,Gabinete Docentes,Bureau Enseignants,Professor's Office
+169,I209,Gabinete Docentes,Bureau Enseignants,Professor's Office
+170,I210,Gabinete Docentes,Bureau Enseignants,Professor's Office
+171,I211,Gabinete Docentes,Bureau Enseignants,Professor's Office
+172,I212,Gabinete Docentes,Bureau Enseignants,Professor's Office
+173,I213,Gabinete Docentes,Bureau Enseignants,Professor's Office
+174,I214,Gabinete Docentes,Bureau Enseignants,Professor's Office
+175,I216,Gabinete Docentes,Bureau Enseignants,Professor's Office
+176,I217,Gabinete Docentes,Bureau Enseignants,Professor's Office
+177,I218,Gabinete Docentes,Bureau Enseignants,Professor's Office
+358,J150,Laboratório,Laboratoire,Laboratory
+359,J151,Laboratório,Laboratoire,Laboratory
+360,J170,Laboratório,Laboratoire,Laboratory
+361,J171,Laboratório,Laboratoire,Laboratory
+362,J172,Sala de Balanças,Bureau Balance de Précision ,Precision Scale Office
+363,J173,Laboratório,Laboratoire,Laboratory
+364,J174,Laboratório,Laboratoire,Laboratory
+365,J175,Laboratório,Laboratoire,Laboratory
+366,J176,Laboratório,Laboratoire,Laboratory
+369,J177,Armazém,Entrepôt,Warehouse
+370,J178,Gabinete,Bureau,Office
+371,J179,Armazém de Papel,Entrepôt,Warehouse
+372,J180,Laboratório de Ensaios Óticos,Laboratoire,Laboratory
+373,J181,Laboratório de Microscopia,Laboratoire,Laboratory
+374,J182,Laboratório de Ensaios Físicos,Laboratoire,Laboratory
+375,J183,Laboratório de Microscopia,Laboratoire,Laboratory
+376,J184,Laboratório Tecnológico,Laboratoire,Laboratory
+377,J185,Gabinete,Bureau,Office
+378,J186,Sala de Aula,Salle de Classe,Classroom
+379,J187,Laboratório de Microbiologia,Laboratoire,Laboratory
+380,J188,Laboratório de Ambiente,Laboratoire,Laboratory
+381,J189,Sala de Aula,Salle de Classe,Classroom
+382,J190,Sala de Aula,Salle de Classe,Classroom
+383,J191,Lab. Invest. Aplic. Riscos Naturais,Laboratoire,Laboratory
+384,J192,Sala de Aula,Salle de Classe,Classroom
+385,J193,Lab. Invest. Aplic. Riscos Naturais,Laboratoire,Laboratory
+178,J201,Gabinete Docentes,Bureau Enseignants,Professor's Office
+180,J203,Gabinete Docentes,Bureau Enseignants,Professor's Office
+181,J204,Gabinete Docentes,Bureau Enseignants,Professor's Office
+182,J205,Gabinete Docentes,Bureau Enseignants,Professor's Office
+183,J206,Gabinete Docentes,Bureau Enseignants,Professor's Office
+184,J207,Gabinete Docentes,Bureau Enseignants,Professor's Office
+185,J208,Gabinete Docentes,Bureau Enseignants,Professor's Office
+186,J209,Gabinete Docentes,Bureau Enseignants,Professor's Office
+187,J210,Gabinete Docentes,Bureau Enseignants,Professor's Office
+188,J211,Gabinete Docentes,Bureau Enseignants,Professor's Office
+189,J212,Gabinete Docentes,Bureau Enseignants,Professor's Office
+190,J213,Gabinete Docentes,Bureau Enseignants,Professor's Office
+191,J214,Gabinete Docentes,Bureau Enseignants,Professor's Office
+192,J215,Sala de Reuniões,Salle de réunion,Meeting room
+193,J216,Gabinete Docentes,Bureau Enseignants,Professor's Office
+194,J217,Gabinete Docentes,Bureau Enseignants,Professor's Office
+195,J218,Gabinete Docentes,Bureau Enseignants,Professor's Office
+388,L150,Sala de Aula,Salle de Classe,Classroom
+389,L151,Sala de Aula,Salle de Classe,Classroom
+390,L170,Armazém,Entrepôt,Warehouse
+391,L171,Armazém,Entrepôt,Warehouse
+392,L172,Armazém,Entrepôt,Warehouse
+393,L173,Sala de Aula,Salle de Classe,Classroom
+394,L174,Laboratório de Física,Laboratoire,Laboratory
+395,L175,Laboratório de Ensaios,Laboratoire,Laboratory
+396,L176,Sala de Aula,Salle de Classe,Classroom
+397,L177,Gabinete,Bureau,Office
+398,L178,Laboratório,Laboratoire,Laboratory
+399,L179,Laboratório,Laboratoire,Laboratory
+400,L180,Gabinete,Bureau,Office
+402,L201,Gabinete Docentes,Bureau Enseignants,Professor's Office
+404,L203,Gabinete Docentes,Bureau Enseignants,Professor's Office
+405,L204,Gabinete Docentes,Bureau Enseignants,Professor's Office
+406,L205,Gabinete Docentes,Bureau Enseignants,Professor's Office
+407,L206,Gabinete Docentes,Bureau Enseignants,Professor's Office
+408,L207,Gabinete Docentes,Bureau Enseignants,Professor's Office
+409,L208,Gabinete Docentes,Bureau Enseignants,Professor's Office
+410,L209,Gabinete Docentes,Bureau Enseignants,Professor's Office
+411,L210,Gabinete Docentes,Bureau Enseignants,Professor's Office
+412,L211,Gabinete Docentes,Bureau Enseignants,Professor's Office
+413,L212,Gabinete Docentes,Bureau Enseignants,Professor's Office
+414,L213,Gabinete Docentes,Bureau Enseignants,Professor's Office
+415,L214,Gabinete Docentes,Bureau Enseignants,Professor's Office
+417,L216,Gabinete Docentes,Bureau Enseignants,Professor's Office
+418,L217,Gabinete Docentes,Bureau Enseignants,Professor's Office
+419,L218,Gabinete Docentes,Bureau Enseignants,Professor's Office
+196,O101,Laboratório Informática,Laboratoire Informatique,Computing Laboratory
+197,O102,Laboratório Informática,Laboratoire Informatique,Computing Laboratory
+198,O103,Sala de Aula,Salle de Classe,Classroom
+199,O104,Sala de Aula,Salle de Classe,Classroom
+200,O105,Sala de Aula,Salle de Classe,Classroom
+206,O201,Gabinete Docentes,Bureau Enseignants,Professor's Office
+207,O202,Gabinete Docentes,Bureau Enseignants,Professor's Office
+208,O203,Gabinete Docentes,Bureau Enseignants,Professor's Office
+209,O206,Gabinete Docentes,Bureau Enseignants,Professor's Office
+210,O207,Gabinete Docentes,Bureau Enseignants,Professor's Office
+211,O208,Gabinete Docentes,Bureau Enseignants,Professor's Office
+212,O209,Gabinete Docentes,Bureau Enseignants,Professor's Office
+213,O210,Gabinete Docentes,Bureau Enseignants,Professor's Office
+214,O212,Gabinete Docentes,Bureau Enseignants,Professor's Office
+215,O214,Gabinete Docentes,Bureau Enseignants,Professor's Office
+216,O215,Gabinete Docentes,Bureau Enseignants,Professor's Office
+217,O216,Gabinete Docentes,Bureau Enseignants,Professor's Office
+218,O217,Gabinete Docentes,Bureau Enseignants,Professor's Office
+219,O219,Sala de Aula,Salle de Classe,Classroom
+220,Q101,Arrumos,Stockage,Storage
+221,Q102,Sala de Aula,Salle de Classe,Classroom
+222,Q103,"Academia da Ciência, Arte e Património","Academia da Ciência, Arte e Património","Academia da Ciência, Arte e Património"
+226,Q201,Laboratório Informática,Laboratoire Informatique,Computing Laboratory
+227,Q202,Arrumos,Stockage,Storage
+228,Q203,Sala de Aula,Salle de Classe,Classroom
+229,Q204,Sala de Aula,Salle de Classe,Classroom
+230,Q205,Gabinete,Bureau,Office
+231,Q206,Gabinete,Bureau,Office
+232,Q207,Gabinete,Bureau,Office

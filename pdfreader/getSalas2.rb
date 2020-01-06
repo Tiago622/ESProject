@@ -18,14 +18,15 @@ rooms_list.uniq!
 
 puts "Fetched #{rooms_list.size} rooms."
 
-filename = "ipt_rooms_#{Time.now.strftime('%Y-%m-%d_%H-%M-%S')}.csv"
+filename = "ipt_rooms.csv"
 
 CSV.open("#{filename}", "w") do |csv|
 	csv.to_io.write "\uFEFF" # use CSV#to_io to write BOM directly 
 	csv << rooms_list.first.keys
   	rooms_list.each do |room|
-  		puts "Saving: #{room["ID"]} - #{room["Nome"]}..."
-    csv << room.values
-  end
+		puts "Saving: #{room["FuncaoPT"]} - #{room["Nome"]}..."
+		Space.create({:name=>room["Nome"],:description=>room["FuncaoPT"]})  
+    	csv << room.values
+  	end
 end
 puts "Saved #{rooms_list.size} rooms to #{filename}."
