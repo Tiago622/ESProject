@@ -1,6 +1,8 @@
 class Course < ApplicationRecord
-  has_one :discipline, dependent: :destroy
-  has_one :url, dependent: :destroy
-  # has_one :schedule, dependent: :destroy
   belongs_to :school
+  has_many :urls, dependent: :destroy
+  has_many :disciplines, dependent: :destroy
+  has_many :schedules, dependent: :destroy
+
+  validates :name, presence: true, length: {minimum: 5}
 end

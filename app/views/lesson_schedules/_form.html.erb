@@ -1,0 +1,27 @@
+<%= form_with(model: lesson_schedule, local: true) do |form| %>
+  <% if lesson_schedule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lesson_schedule.errors.count, "error") %> prohibited this lesson_schedule from being saved:</h2>
+
+      <ul>
+      <% lesson_schedule.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :lesson_name %>
+    <%= collection_select(:lesson_schedule, :lesson_id, Lesson.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :schedule_id %>
+    <%= collection_select(:lesson_schedule, :schedule_id, Schedule.all, :id, :year) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

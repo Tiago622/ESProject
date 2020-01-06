@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
-  resources :spaces
+
+  resources :lesson_schedules
+  resources :lessons
   resources :people
+  resources :schedules
+  #change root (home)
+  #root to: 'controller#action'
+  
+  #single resource path example:
+  #get 'login', to: 'controller#action'
+  
+  resources :schedules
   resources :disciplines
   resources :urls
   resources :courses

@@ -27,8 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :organic_unit_id %>
-    <%= form.text_field :organic_unit_id %>
+    <%= form.label :organic_unit_name %>
+    <%= collection_select(:school, :organic_unit_id, OrganicUnit.all, :id, :name) %>
   </div>
 
   <div class="actions">

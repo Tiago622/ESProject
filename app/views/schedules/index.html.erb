@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Schedules</h1>
+
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">School year</th>
+      <th scope="col">Year</th>
+      <th scope="col">Schedule class</th>
+      <th scope="col">Version</th>
+      <th scope="col">Course</th>
+      <th scope="col" colspan="3">Option</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schedules.each do |schedule| %>
+      <tr>
+        <td><%= schedule.school_year %></td>
+        <td><%= schedule.year %></td>
+        <td><%= schedule.schedule_class %></td>
+        <td><%= schedule.version %></td>
+        <td><%= schedule.course.name %></td>
+        <td><%= link_to 'Show', schedule %></td>
+        <td><%= link_to 'Edit', edit_schedule_path(schedule) %></td>
+        <td><%= link_to 'Destroy', schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Schedule', new_schedule_path %>

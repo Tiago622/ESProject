@@ -16,6 +16,41 @@
     <%= form.text_field :name %>
   </div>
 
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :extension %>
+    <%= form.text_field :extension %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cabinet %>
+    <%= form.text_field :cabinet %>
+  </div>
+
+  <div class="field">
+    <label for="person_job_title_3">Job title #1</label>
+    <%= form.text_field :job_title_1 %>
+  </div>
+
+  <div class="field">
+    <label for="person_job_title_3">Job title #2</label>
+    <%= form.text_field :job_title_2 %>
+  </div>
+
+  <div class="field">
+    <label for="person_job_title_3">Job title #3</label>
+    <%= form.text_field :job_title_3 %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
