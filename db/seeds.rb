@@ -31,5 +31,5 @@ Person.create([
 Discipline.create([
     {name:'Análise Matemática I', course_id:'3'},
     {name:'Introdução à Programação', course_id:'3'},
-    {name:'', course_id:'Laboratórios de Engenharia Electrotécnica', course_id:'4'}
+    {name:'Laboratórios de Engenharia Electrotécnica', course_id:'4'}
 ])

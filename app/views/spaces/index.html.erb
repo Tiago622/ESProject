@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Department</th>
       <th>Type of space</th>
       <th>Capacity</th>
       <th>Description</th>
@@ -19,6 +20,7 @@
     <% @spaces.each do |space| %>
       <tr>
         <td><%= space.name %></td>
+        <td><%= space.department %></td>
         <td><%= space.type_of_space %></td>
         <td><%= space.capacity %></td>
         <td><%= space.description %></td>

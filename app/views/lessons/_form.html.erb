@@ -46,6 +46,11 @@
     <%= collection_select(:lesson, :person_id, Person.all, :id, :name) %>
   </div>
 
+  <div class="field">
+    <%= form.label :space_name %>
+    <%= collection_select(:lesson, :space_id, Space.all, :id, :name) %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_05_162318) do
+ActiveRecord::Schema.define(version: 2020_01_06_223145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,8 +50,10 @@ ActiveRecord::Schema.define(version: 2020_01_05_162318) do
     t.bigint "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "space_id"
     t.index ["discipline_id"], name: "index_lessons_on_discipline_id"
     t.index ["person_id"], name: "index_lessons_on_person_id"
+    t.index ["space_id"], name: "index_lessons_on_space_id"
   end
 
   create_table "organic_units", force: :cascade do |t|
@@ -74,6 +76,20 @@ ActiveRecord::Schema.define(version: 2020_01_05_162318) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "reservations", force: :cascade do |t|
+    t.string "reason"
+    t.string "state"
+    t.date "date"
+    t.time "start_time"
+    t.time "end_time"
+    t.bigint "person_id"
+    t.bigint "space_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_reservations_on_person_id"
+    t.index ["space_id"], name: "index_reservations_on_space_id"
+  end
+
   create_table "schedules", force: :cascade do |t|
     t.string "school_year"
     t.string "year"
@@ -82,6 +98,7 @@ ActiveRecord::Schema.define(version: 2020_01_05_162318) do
     t.bigint "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["course_id"], name: "index_schedules_on_course_id"
   end
 
@@ -93,6 +110,18 @@ ActiveRecord::Schema.define(version: 2020_01_05_162318) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["organic_unit_id"], name: "index_schools_on_organic_unit_id"
+  end
+
+  create_table "spaces", force: :cascade do |t|
+    t.string "name"
+    t.string "department"
+    t.string "type_of_space"
+    t.string "capacity"
+    t.string "description"
+    t.boolean "availability"
+    t.string "equipment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "urls", force: :cascade do |t|
@@ -109,6 +138,9 @@ ActiveRecord::Schema.define(version: 2020_01_05_162318) do
   add_foreign_key "lesson_schedules", "schedules"
   add_foreign_key "lessons", "disciplines"
   add_foreign_key "lessons", "people"
+  add_foreign_key "lessons", "spaces"
+  add_foreign_key "reservations", "people"
+  add_foreign_key "reservations", "spaces"
   add_foreign_key "schedules", "courses"
   add_foreign_key "schools", "organic_units"
   add_foreign_key "urls", "courses"
