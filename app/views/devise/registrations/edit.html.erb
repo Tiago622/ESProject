@@ -1,43 +1,69 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="text-center container mt-5">
+  <div class="card mb-4">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="text-center mb-4">
+      <span class="display-4 font-weight-normal">Edit <%= resource_name.to_s.humanize %></span>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      
+      <%= render "devise/shared/error_messages", resource: resource %>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+      <div class="row d-flex justify-content-center mb-4">
+        <span class="col-1">
+          <%= f.label :email %><br />
+        </span>
+        <div class="col-6">
+          <%=  f.email_field :email, autofocus: true, autocomplete: "email" , required:"", class:"form-control"%>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="row d-flex justify-content-center mb-4">
+        <span class="col-2">
+          <%= f.label :current_password %><br />
+        </span>
+        <div class="col-5">
+          <%=  f.password_field :current_password, autocomplete: "current-password", placeholder:"we need your current password to confirm your changes", required:"", class:"form-control"%>
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center mb-4">
+        <span class="col-3">
+          <%= f.label :password %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %>
+        </span>
+        <div class="col-4">
+          <%= f.password_field :password, autocomplete: "new-password", placeholder:"leave blank if you don't want to change it", class:"form-control" %>
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center mb-4">
+        <span class="col-3">
+          <%= f.label :password_confirmation %><br />
+        </span>
+        <div class="col-4">
+          <%=  f.password_field :password_confirmation, autocomplete: "new-password", required:"", class:"form-control"%>
+        </div>
+      </div>      
+
+      <div class="actions row justify-content-md-center">
+        <%= f.submit "Update", class:"btn btn-dark btn-lg col-6 mb-4" %>
+      </div>
     <% end %>
+
+    <h3>Cancel my account</h3>
+
+    <p>Unhappy? 
+      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-secondary" %>
+    </p>
+
+    <%= link_to "Back", :back %>
+
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
