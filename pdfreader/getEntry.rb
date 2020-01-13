@@ -9,6 +9,7 @@ sabado_array = []
 
 disciplinas=[]
 cursos=[]
+people=[]
 
 queue.each do |ficheiro_dia_da_semana|
   line_num = 0
@@ -59,6 +60,7 @@ queue.each do |ficheiro_dia_da_semana|
         cursos.push(curso)
       elsif line_num %4 == 2
         responsavel = mensagem.split("\r\n")[0]
+        people.push(responsavel)
         
       else
         cadeira = mensagem.split("\r\n")[0]
@@ -75,10 +77,14 @@ arrays= [segunda_array,terca_array,quarta_array,quinta_array,sexta_array,sabado_
 
 disciplinas = disciplinas.uniq
 cursos= cursos.uniq
+people= people.uniq
+unidade= {:name=>"IPT", :acronym=> "IPT"}
 
-OrganicUnit.create({:name=>"IPT", :acronym=> "IPT"})
+OrganicUnit.create(unidade)
 
-School.create({:name=> "ESTTss", :acronym=> "IPT", :address=>"sim", :organic_unit=> "IPT"})
+escola= {:name=> "ESTTss", :acronym=> "ESTT", :address=>"sim", :organic_unit=> "IPT"}
+
+School.create(escola)
 
 cursos.each do |curso|
   puts curso
@@ -91,6 +97,9 @@ disciplinas.each do |disciplina|
 
 end
 
+people.each do |person|
+  Person.create(person)
+end
 arrays.each do |dia|
   dia.each do |entrada|
     puts entrada
