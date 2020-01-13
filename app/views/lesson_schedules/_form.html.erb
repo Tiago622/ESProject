@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :schedule_id %>
-    <%= collection_select(:lesson_schedule, :schedule_id, Schedule.all, :id, :year) %>
+    <%= collection_select(:lesson_schedule, :schedule_id, Schedule.all, :id, :name) %>
   </div>
 
   <div class="actions">

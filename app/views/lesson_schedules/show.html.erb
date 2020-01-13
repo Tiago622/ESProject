@@ -2,12 +2,12 @@
 
 <p>
   <strong>Lesson:</strong>
-  <%= @lesson_schedule.lesson %>
+  <%= @lesson_schedule.lesson.name %>
 </p>
 
 <p>
   <strong>Schedule:</strong>
-  <%= @lesson_schedule.schedule %>
+  <%= @lesson_schedule.schedule.name %>
 </p>
 
 <%= link_to 'Edit', edit_lesson_schedule_path(@lesson_schedule) %> |
