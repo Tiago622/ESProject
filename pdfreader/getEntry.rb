@@ -8,9 +8,6 @@ quinta_array = []
 sexta_array = []
 sabado_array = []
 
-#disciplinas=[]
-#cursos=[]
-#people=[]
 
 unidade= {:name=>"IPT", :acronym=> "IPT"}
 
@@ -41,7 +38,7 @@ queue.each do |ficheiro_dia_da_semana|
       curso= "#{linha[5].split(": ")[1]}" #curso
       @cursoe = Course.find_by(:name=>curso) 
       if @cursoe.nil?
-        Course.create(:name=>curso, :school=>@escolae)
+        @cursoe = Course.create(:name=>curso, :school=>@escolae)
       end
       
       mensagem = "#{linha[8].split(": ")[1]}" #texto
@@ -54,6 +51,7 @@ queue.each do |ficheiro_dia_da_semana|
         sala = mensagem.split("\r\n")[0]
         @salae = Space.find_by(:name=>sala)
         if @salae.nil?
+          @salae =Space.create({:name=>sala,:description=>sala}) 
           puts sala
         end
 
@@ -77,16 +75,15 @@ queue.each do |ficheiro_dia_da_semana|
             sabado_array.push({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=> @salae, :person=> @responsavele,:start_time => hora_inicio  , :name => cadeira, :discipline => @disc})
             puts "#{sabado_array}"
         end
-        #disciplinas.push({:name=> cadeira, :course=> @curso})
-        #cursos.push(curso)
+        
       elsif line_num %4 == 2
         responsavel = mensagem.split("\r\n")[0]
         @responsavele = Person.find_by(:name=>responsavel) 
         if @responsavele.nil?
           puts responsavel
-          Person.create(:name=>responsavel)
+          @responsavele = Person.create(:name=>responsavel)
+
         end
-        #people.push(responsavel)
         
       else
         hora_inicio = "#{linha[7].split(": ")[1].split(" - ")[0]}" #horas inicio
@@ -94,7 +91,7 @@ queue.each do |ficheiro_dia_da_semana|
         cadeira = mensagem.split("\r\n")[0]
         @disc=Discipline.find_by(:name=>cadeira)
         if @disc.nil?
-          Discipline.create(:name=>cadeira, :course=>@cursoe)
+          @disc=Discipline.create(:name=>cadeira, :course=>@cursoe)
         end
       end
     
