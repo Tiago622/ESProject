@@ -11,27 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+   <div class="form-group row">
+    <%= form.label :name, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :acronym %>
-    <%= form.text_field :acronym %>
+  <div class="form-group row">
+    <%= form.label :acronym, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :acronym, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
+  <div class="form-group row">
+    <%= form.label :address, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :address, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :organic_unit_name %>
-    <%= collection_select(:school, :organic_unit_id, OrganicUnit.all, :id, :name) %>
+  <div class="form-group row">
+    <%= form.label :organic_unit_name, class: "col-sm-2 col-form-label"  %>
+    <div class="col-sm-10">
+      <%= collection_select(:school, :organic_unit_id, OrganicUnit.all, :id, :name, {}, {class: "custom-select"}) %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= link_to 'Back', schools_path, class: "btn btn-secondary" %>
+    <%= form.submit class: "btn btn-dark" %>
   </div>
 <% end %>
