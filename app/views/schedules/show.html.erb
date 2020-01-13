@@ -45,5 +45,14 @@
   <%= @schedule.course.school.organic_unit.name %>
 </p>
 
+<h5>Lessons from this Schedule</h5>
+
+<ul class="list-group list-group-horizontal">
+  <% @schedule.lessons.each do |lesson| %>
+    <li class="list-group-item"><%= lesson.name %></li>
+  <% end %>
+</ul>  
+
+
 <%= link_to 'Edit', edit_schedule_path(@schedule) %> |
 <%= link_to 'Back', schedules_path %>

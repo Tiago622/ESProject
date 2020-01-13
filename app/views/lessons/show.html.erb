@@ -35,5 +35,14 @@
   <%= @lesson.person.name %>
 </p>
 
+<h5>Schedules from this Lesson</h5>
+
+<ul class="list-group list-group-horizontal">
+  <% @lesson.schedules.each do |schedule| %>
+    <li class="list-group-item"><%= schedule.name %></li>
+  <% end %>
+</ul>  
+
+
 <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
 <%= link_to 'Back', lessons_path %>
