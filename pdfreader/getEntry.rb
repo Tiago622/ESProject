@@ -12,9 +12,13 @@ sabado_array = []
 queue.each do |ficheiro_dia_da_semana|
   line_num = 0
   nome_ficheiro = ficheiro_dia_da_semana + ".txt"
-
+  
+  tipo=""
+  sala=""
+  responsavel=""
+  cadeira=""
   novo_objecto = OpenStruct.new
-  File.open(nome_ficheiro).each do |line|
+  File.open(Rails.root+"pdfreader/"+nome_ficheiro).each do |line|
       linha = line.split('/')
       semestre = "#{linha[1].split(": ")[1]}"
       ano_lec = "#{linha[2].split(": ")[1]}"
@@ -27,43 +31,35 @@ queue.each do |ficheiro_dia_da_semana|
       mensagem = "#{linha[8].split(": ")[1]}" #texto
       
       if line_num %4 == 1
-        tipo = mensagem
+        tipo = mensagem.split("\r\n")[0]
       elsif line_num %4 == 3
-        sala = mensagem
-        hora_fim = hora_fim
+        sala = mensagem.split("\r\n")[0]
         case (dia_s)
           when "SEGUNDA" 
-            segunda_array.push({:tipo=> tipo, :dia_semana=>dia_s, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            segunda_array.push({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=>sala, :person=> responsavel, :semestre => semestre,:start_time => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :name => cadeira})
             puts "#{segunda_array}"
           when "TERCA"
-            terca_array.push({:tipo=> tipo, :dia_semana=>dia_s, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            terca_array.push({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=>sala, :person=> responsavel, :semestre => semestre,:start_time => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :name => cadeira})
             puts "#{terca_array}"
           when "QUARTA"
-            quarta_array.push({:tipo=> tipo, :dia_semana=>dia_s, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            quarta_array.push({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=>sala, :person=> responsavel, :semestre => semestre,:start_time => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :name => cadeira})
             puts "#{quarta_array}"
           when "QUINTA"
-            quinta_array.push({:tipo=> tipo, :dia_semana=>dia_s, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            quinta_array.push({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=>sala, :person=> responsavel, :semestre => semestre,:start_time => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :name => cadeira})
             puts "#{quinta_array}"
           when "SEXTA"
-            sexta_array.push({:tipo=> tipo, :dia_semana=>dia_s, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            sexta_array.push({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=>sala, :person=> responsavel, :semestre => semestre,:start_time => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :name => cadeira})
             puts "#{sexta_array}"
           when "SABADO"
-            sabado_array.push({:tipo=> tipo, :dia_semana=>dia_s, :hora_fim=> hora_fim, :sala=>sala, :responsavel=> responsavel, :semestre => semestre, :hora_inicio => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :cadeira => cadeira})
+            sabado_array.push({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=>sala, :person=> responsavel, :semestre => semestre,:start_time => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :name => cadeira})
             puts "#{sabado_array}"
         end
         
       elsif line_num %4 == 2
-        responsavel = mensagem
+        responsavel = mensagem.split("\r\n")[0]
         
       else
-        
-        semestre = semestre
-        hora_inicio = hora_inicio
-        curso = curso
-        ano_curso = ano_curso
-        turma = turma
-        ano_lec = ano_lec   
-        cadeira = mensagem 
+        cadeira = mensagem.split("\r\n")[0]
       end
     
     
@@ -77,8 +73,8 @@ arrays= [segunda_array,terca_array,quarta_array,quinta_array,sexta_array,sabado_
 
 arrays.each do |dia|
   dia.each do |entrada|
-    
-    Entrada.create(entrada)
+    puts entrada
+    Lesson.create(entrada)
 
   end
 end
