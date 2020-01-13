@@ -7,7 +7,8 @@ quinta_array = []
 sexta_array = []
 sabado_array = []
 
-
+disciplinas=[]
+cursos=[]
 
 queue.each do |ficheiro_dia_da_semana|
   line_num = 0
@@ -54,7 +55,8 @@ queue.each do |ficheiro_dia_da_semana|
             sabado_array.push({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=>sala, :person=> responsavel, :semestre => semestre,:start_time => hora_inicio, :curso => curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec, :name => cadeira})
             puts "#{sabado_array}"
         end
-        
+        disciplinas.push({:name=> cadeira, :course=> curso})
+        cursos.push(curso)
       elsif line_num %4 == 2
         responsavel = mensagem.split("\r\n")[0]
         
@@ -70,6 +72,24 @@ queue.each do |ficheiro_dia_da_semana|
 end
 
 arrays= [segunda_array,terca_array,quarta_array,quinta_array,sexta_array,sabado_array]
+
+disciplinas = disciplinas.uniq
+cursos= cursos.uniq
+
+OrganicUnit.create({:name=>"IPT", :acronym=> "IPT"})
+
+School.create({:name=> "ESTTss", :acronym=> "IPT", :address=>"sim", :organic_unit=> "IPT"})
+
+cursos.each do |curso|
+  puts curso
+  Course.create({:name=> curso, :School=>"ESTTss"})
+end
+
+disciplinas.each do |disciplina|
+  puts disciplina
+  Discipline.create(disciplina)
+
+end
 
 arrays.each do |dia|
   dia.each do |entrada|
