@@ -35,5 +35,22 @@
   <%= @space.equipment %>
 </p>
 
+<h5>Lessons from this Space</h5>
+
+<ul class="list-group list-group-horizontal mb-3">
+  <% @space.lessons.each do |lesson| %>
+    <li class="list-group-item"><%= lesson.name %></li>
+  <% end %>
+</ul>  
+
+<h5>Reservations from this Space</h5>
+
+<ul class="list-group list-group-horizontal mb-3">
+  <% @space.reservations.each do |reservation| %>
+    <li class="list-group-item list-group-item-dark"><%= reservation.date %>, <%= reservation.start_time.strftime("%I:%M%p") %> - <%= reservation.end_time.strftime("%I:%M%p") %></li>
+  <% end %>
+</ul>  
+
+
 <%= link_to 'Edit', edit_space_path(@space) %> |
 <%= link_to 'Back', spaces_path %>

@@ -1,5 +1,5 @@
 class Url < ApplicationRecord
   belongs_to :course
 
-  validates :name, presence: true, length: {minimum: 10}
+  validates :url, presence: true, length: {minimum: 10}
 end

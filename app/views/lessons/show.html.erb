@@ -37,9 +37,9 @@
 
 <h5>Schedules from this Lesson</h5>
 
-<ul class="list-group list-group-horizontal">
+<ul class="list-group list-group-horizontal mb-3">
   <% @lesson.schedules.each do |schedule| %>
-    <li class="list-group-item"><%= schedule.name %></li>
+    <li class="list-group-item list-group-item-dark"><%= schedule.name %></li>
   <% end %>
 </ul>  
 

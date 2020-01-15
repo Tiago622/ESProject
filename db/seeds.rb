@@ -33,3 +33,7 @@ Discipline.create([
     {name:'Introdução à Programação', course_id:'3'},
     {name:'Laboratórios de Engenharia Electrotécnica', course_id:'4'}
 ])
+
+Url.create([
+    {url:'http://portal2.ipt.pt/media/manager.php?cmd=file&target=m1_MTI2MzQ', course_id:'3'}
+])

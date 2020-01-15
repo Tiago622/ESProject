@@ -56,13 +56,6 @@ ActiveRecord::Schema.define(version: 2020_01_13_213903) do
     t.index ["space_id"], name: "index_lessons_on_space_id"
   end
 
-  create_table "lessons_schedules", id: false, force: :cascade do |t|
-    t.bigint "lesson_id"
-    t.bigint "schedule_id"
-    t.index ["lesson_id"], name: "index_lessons_schedules_on_lesson_id"
-    t.index ["schedule_id"], name: "index_lessons_schedules_on_schedule_id"
-  end
-
   create_table "organic_units", force: :cascade do |t|
     t.string "name"
     t.string "acronym"
@@ -138,19 +131,6 @@ ActiveRecord::Schema.define(version: 2020_01_13_213903) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_urls_on_course_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "courses", "schools"

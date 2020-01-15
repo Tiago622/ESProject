@@ -14,7 +14,7 @@
   <tbody>
     <% @urls.each do |url| %>
       <tr>
-        <td><%= url.url %></td>
+        <td><a href=<%= url.url %>><%= url.url %></a> </td>
         <td><%= url.course.name %></td>
         <td><%= link_to 'Show', url %></td>
         <td><%= link_to 'Edit', edit_url_path(url) %></td>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Url', new_url_path %>
+<%= link_to 'New Url', new_url_path, class: "btn btn-dark"  %>
