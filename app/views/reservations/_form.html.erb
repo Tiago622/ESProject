@@ -11,42 +11,57 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :reason %>
-    <%= form.text_field :reason %>
+  <div class="form-group row">
+    <%= form.label :reason, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :reason, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state %>
+  <div class="form-group row">
+    <%= form.label :state, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :state, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
+  <div class="form-group row">
+    <%= form.label :date, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.date_select :date, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :start_time %>
-    <%= form.time_select :start_time %>
+  <div class="form-group row">
+    <%= form.label :start_time, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.time_select :start_time, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :end_time %>
-    <%= form.time_select :end_time %>
+  <div class="form-group row">
+    <%= form.label :end_time, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.time_select :end_time, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :person_name %>
-    <%= collection_select(:reservation, :person_id, Person.all, :id, :name) %>
+  <div class="form-group row">
+    <%= form.label :person_name, class: "col-sm-2 col-form-label"  %>
+    <div class="col-sm-10">
+      <%= collection_select(:reservation, :person_id, Person.all, :id, :name, {}, {class: "custom-select"}) %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :space_name %>
-    <%= collection_select(:reservation, :space_id, Space.all, :id, :name) %>
+  <div class="form-group row">
+    <%= form.label :space_name, class: "col-sm-2 col-form-label"  %>
+    <div class="col-sm-10">
+      <%= collection_select(:reservation, :space_id, Space.all, :id, :name, {}, {class: "custom-select"}) %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= link_to 'Back', reservations_path, class: "btn btn-secondary" %>
+    <%= form.submit class: "btn btn-dark"%>
   </div>
 <% end %>
