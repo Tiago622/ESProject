@@ -1,11 +1,21 @@
-<!-- utilizador nao autenticado
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">Schedules</a>
-        </nav> -->
 
 
-    <!-- utilizador autenticado -->
+<% if user_signed_in? == false %>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Schedules</a>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+        <div>
+            <%= render 'layouts/pesquisarSala' %>
+            </div>
+            <!-- LOGIN -->
+            <div>
+                <%= link_to 'Login', new_user_session_path, class:"btn btn-sm btn-secondary" %>
+                <%= link_to 'Register', new_user_registration_path, class:"btn btn-sm btn-secondary" %>
+            </div>
+        </div>
+    </nav>
+<% else %> 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/">Schedules</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,11 +36,12 @@
                         <%# <a class="dropdown-item" href="#">Pendentes</a>  %>
                     </div>
                 </li>
-                <!-- apenas visivel para role funcionario -->
                 <!-- UTILIZADORES -->
+                <!--
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Utilizadores</a>
                 </li>
+                 -->
                 <!-- SALAS -->
                 <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkSalas" role="button"
@@ -44,58 +55,19 @@
                 </li>
             </ul>
 
-            <!-- MODAL -->
-            <button class="btn btn-sm btn-secondary" type="button" data-toggle="modal" data-target="#exampleModal">
-                Pesquisar docente
-            </button>
-            <div class="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Pesquisar docente</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <input id="searchDocente" class="form-control mr-sm-2" type="search"
-                                    placeholder="nome do docente" aria-label="Search"></input>
-                                <br>
-                                <div class="form-row text-center">
-                                    <div class="col-md-3 mt-md-0 mt-3">
-                                        <label class="form-control text-center" for="inputInicio">De</label>
-                                    </div>
-                                    <div class="col-md-9 mt-md-0 mt-3">
-                                        <input class="form-control" type="datetime-local" id="inputInicio" />
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-md-3 mt-md-0 mt-3">
-                                        <label class="form-control text-center">até</label>
-                                    </div>
-                                    <div class="col-md-9 mt-md-0 mt-3">
-                                        <input class="form-control" type="datetime-local" />
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-success" type="search">Pesquisar</button>
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <%= render 'layouts/pesquisarSala' %>
 
             <!-- LOGOUT -->
             <div>
                 <span class="navbar-text align-middle">
-                    Bem-vindo, utilizador
-                    <!-- nome-->
+                    Bem-vindo, 
+                    <%= current_user.name %>
                 </span>
-                <button class="btn btn-sm btn-secondary" type="button">Terminar Sessão</button>
+                <%= link_to 'Perfil', edit_user_registration_path,class:"btn btn-sm btn-secondary" %>
+                <%= link_to 'logout', destroy_user_session_path, method: :delete, class:"btn btn-sm btn-secondary" %>
             </div>
         </div>
     </nav>
+<% end %>
+
+    
