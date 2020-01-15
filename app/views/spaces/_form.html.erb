@@ -11,42 +11,57 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group row">
+    <%= form.label :name, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :department %>
-    <%= form.text_field :department %>
+  <div class="form-group row">
+    <%= form.label :department, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field  :department, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :type_of_space %>
-    <%= form.text_field :type_of_space %>
+  <div class="form-group row">
+    <%= form.label :type_of_space, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :type_of_space, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :capacity %>
-    <%= form.text_field :capacity %>
+  <div class="form-group row">
+    <%= form.label :capacity, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :capacity, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+  <div class="form-group row">
+    <%= form.label :description, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :description, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :availability %>
-    <%= form.check_box :availability %>
+  <div class="form-group row">
+    <%= form.label :availability, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.check_box :availability, class: "form-control btn", style:"width:24px;height:24px;" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :equipment %>
-    <%= form.text_field :equipment %>
+  <div class="form-group row">
+    <%= form.label :equipment, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :equipment, class: "form-control" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= link_to 'Back', spaces_path, class: "btn btn-secondary" %>
+    <%= form.submit class: "btn btn-dark" %>
   </div>
 <% end %>

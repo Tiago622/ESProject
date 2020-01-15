@@ -44,7 +44,7 @@
 
 <ul class="list-group list-group-horizontal mb-3">
   <% @person.lessons.each do |lesson| %>
-    <li class="list-group-item"><%= lesson.name %></li>
+    <li class="list-group-item list-group-item-dark"><%= lesson.name %></li>
   <% end %>
 </ul>  
 
@@ -56,5 +56,6 @@
   <% end %>
 </ul>  
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<%= link_to 'Back', people_path, class: "btn btn-secondary" %>
+<%= link_to 'Edit', edit_person_path(@person), class: "btn btn-dark" %>
+
