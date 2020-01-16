@@ -8,6 +8,7 @@ one:
   end_time: 2020-01-05 16:23:05
   discipline: one
   person: one
+  space: one
 
 two:
   name: MyString
@@ -17,3 +18,4 @@ two:
   end_time: 2020-01-05 16:23:05
   discipline: two
   person: two
+  space: two
