@@ -11,47 +11,64 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group row">
+    <%= form.label :name, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :lesson_type %>
-    <%= form.text_field :lesson_type %>
+  <div class="form-group row">
+    <%= form.label :lesson_type, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :lesson_type, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :week_day %>
-    <%= form.text_field :week_day %>
+  <div class="form-group row">
+    <%= form.label :week_day, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :week_day, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :start_time %>
-    <%= form.time_select :start_time %>
+  <div class="form-group row">
+    <%= form.label :start_time, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.time_select :start_time, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :end_time %>
-    <%= form.time_select :end_time %>
+  <div class="form-group row">
+    <%= form.label :end_time, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.time_select :end_time, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :discipline_name %>
-    <%= collection_select(:lesson, :discipline_id, Discipline.all, :id, :name) %>
+  <div class="form-group row">
+    <%= form.label :discipline_name, class: "col-sm-2 col-form-label"  %>
+    <div class="col-sm-10">
+        <%= collection_select(:lesson, :discipline_id, Discipline.all, :id, :name, {}, {class: "custom-select"}) %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :person_name %>
-    <%= collection_select(:lesson, :person_id, Person.all, :id, :name) %>
+  <div class="form-group row">
+    <%= form.label :person_name, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= collection_select(:lesson, :person_id, Person.all, :id, :name, {}, {class: "custom-select"}) %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :space_name %>
-    <%= collection_select(:lesson, :space_id, Space.all, :id, :name) %>
+  <div class="form-group row">    
+    <%= form.label :space_name, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+    <%= collection_select(:lesson, :space_id, Space.all, :id, :name, {}, {class: "custom-select"}) %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+      <%= link_to 'Back', lessons_path, class: "btn btn-secondary" %>
+    <%= form.submit class: "btn btn-dark" %>
   </div>
 <% end %>
