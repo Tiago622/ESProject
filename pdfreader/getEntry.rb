@@ -26,15 +26,9 @@ queue.each do |ficheiro_dia_da_semana|
       linha = line.split('/')
       semestre = "#{linha[1].split(": ")[1]}"
       ano_lec = "#{linha[2].split(": ")[1]}"
-      puts "ano_lec:"
-      puts ano_lec
-      puts "######"
       turma = "#{linha[3].split(": ")[1]}" #turma
       
       ano_curso = "#{linha[4].split(": ")[1]}" #ano
-      puts "ano_curso:"
-      puts ano_curso
-      puts "######"
       dia_s = "#{linha[6].split(": ")[1]}" #dia da semana
       curso= "#{linha[5].split(": ")[1]}" #curso
       @cursoe = Course.find_by(:name=>curso) 
@@ -54,7 +48,8 @@ queue.each do |ficheiro_dia_da_semana|
           #@salae =Space.create({:name=>sala,:description=>sala}) 
           puts sala
         end
-        @less = Lesson.create({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=> @salae, :person=> @responsavele, :start_time => hora_inicio, :name => cadeira, :discipline => @disc}) #:semestre => semestre, :course => @curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec
+        nome_feio= " "+ cadeira+ " "+ tipo + " " +responsavel + " " + sala + " " + dia_s
+        @less = Lesson.create({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=> @salae, :person=> @responsavele, :start_time => hora_inicio, :name => nome_feio, :discipline => @disc}) #:semestre => semestre, :course => @curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec
       elsif line_num %4 == 2
         responsavel = mensagem.split("\r\n")[0]
         @responsavele = Person.find_by(:name=>responsavel) 
@@ -72,10 +67,11 @@ queue.each do |ficheiro_dia_da_semana|
         end
       end
       line_num += 1
-      
-      @horario = Schedule.find_by({:school_year=>ano_curso, :year=>ano_lec, :schedule_class=> turma, :course=> @cursoe})
+      nome_lindo= curso +": "+ano_curso + "ºano turma " + turma + " ano:" + ano_lec + ": " +semestre+ "º semestre"
+
+      @horario = Schedule.find_by({:school_year=>ano_lec, :year=>ano_curso, :schedule_class=> turma, :version=>"1", :course=> @cursoe, :name=>nome_lindo, :semester=>semestre})
       if @horario.nil?
-        @horario = Schedule.create({:school_year=>ano_curso, :year=>ano_lec, :schedule_class=> turma, :version=>"1", :course=> @cursoe})
+        @horario = Schedule.create({:school_year=>ano_lec, :year=>ano_curso, :schedule_class=> turma, :version=>"1", :course=> @cursoe, :name=>nome_lindo, :semester=>semestre})
       else
         pp @horario
       end

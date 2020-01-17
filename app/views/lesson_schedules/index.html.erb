@@ -14,7 +14,7 @@
   <tbody>
     <% @lesson_schedules.each do |lesson_schedule| %>
       <tr>
-        <td><%= lesson_schedule.lesson.name %></td>
+        <td><%= lesson_schedule.lesson %></td>
         <td><%= lesson_schedule.schedule.name %></td>
         <td><%= link_to 'Show', lesson_schedule %></td>
         <td><%= link_to 'Edit', edit_lesson_schedule_path(lesson_schedule) %></td>
