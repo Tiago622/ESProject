@@ -67,6 +67,7 @@ queue.each do |ficheiro_dia_da_semana|
   hora_inicio=""
   hora_fim=""
   File.open(Rails.root+"pdfreader/"+nome_ficheiro).each do |line|
+    
       linha = line.split('/')
       semestre = "#{linha[1].split(": ")[1]}"
       ano_lec = "#{linha[2].split(": ")[1]}"
@@ -93,9 +94,11 @@ queue.each do |ficheiro_dia_da_semana|
           puts sala
         end
         nome_feio= " "+ cadeira+ " "+ tipo + " " +responsavel + " " + sala + " " + dia_s
-        @less = Lesson.find_by({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=> @salae, :person=> @responsavele, :start_time => hora_inicio, :name => nome_feio, :discipline => @disc})
+        @less = Lesson.find_by({:end_time => hora_fim, :week_day=>dia_s,:space=> @salae, :person=> @responsavele, :start_time => hora_inicio})
         if @less.nil?
           @less = Lesson.create({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=> @salae, :person=> @responsavele, :start_time => hora_inicio, :name => nome_feio, :discipline => @disc}) #:semestre => semestre, :course => @curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec
+        else
+          pp @less
         end
 
       elsif line_num %4 == 2
@@ -111,6 +114,7 @@ queue.each do |ficheiro_dia_da_semana|
         cadeira = mensagem.split("\r\n")[0]
         @disc=Discipline.find_by(:name=>cadeira)
         if @disc.nil?
+          
           @disc=Discipline.create(:name=>cadeira, :course=>@cursoe)
         end
       end
