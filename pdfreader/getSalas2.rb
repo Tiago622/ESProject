@@ -1,6 +1,6 @@
+require 'csv' 
 require 'net/http'
 require 'json'
-require 'csv' 
 
 rooms_list = []
 

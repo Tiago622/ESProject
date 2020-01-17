@@ -1,4 +1,48 @@
 require 'byebug'
+require 'csv'
+require 'net/http'
+require 'json'
+
+rooms_list = []
+
+("A".."Z").each do |letter|
+	3.times do |page|
+		uri = URI("http://appmobile.ipt.pt/api/salasapi/#{letter}/#{page}")
+		puts "Querying: #{uri}"
+		response = Net::HTTP.get(uri)
+		data_json = JSON.parse(response)
+		rooms_list.concat data_json unless data_json.nil?
+	end
+end
+
+rooms_list.uniq!
+
+puts "Fetched #{rooms_list.size} rooms."
+
+filename = "ipt_rooms.csv"
+
+CSV.open("#{filename}", "w") do |csv|
+	csv.to_io.write "\uFEFF" # use CSV#to_io to write BOM directly 
+	csv << rooms_list.first.keys
+  	rooms_list.each do |room|
+		puts "Saving: #{room["FuncaoPT"]} - #{room["Nome"]}..."
+		Space.create({:name=>room["Nome"],:description=>room["FuncaoPT"]})  
+    	csv << room.values
+  	end
+end
+puts "Saved #{rooms_list.size} rooms to #{filename}."
+
+ficheiro = File.read(Rails.root+"pdfreader/pessoas.csv")
+
+table = CSV.parse(ficheiro, headers: true)
+
+table.each do |linha|
+    Person.create({:name=>linha['nome']})
+    puts "#{linha['nome']} : #{linha['email']}"
+end
+
+
+
 queue = ["SEGUNDA", "TERCA", "QUARTA", "QUINTA", "SEXTA"] #, "SABADO" #meter quando houve horarios com sabado
 arrays=[]
 
@@ -49,7 +93,11 @@ queue.each do |ficheiro_dia_da_semana|
           puts sala
         end
         nome_feio= " "+ cadeira+ " "+ tipo + " " +responsavel + " " + sala + " " + dia_s
-        @less = Lesson.create({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=> @salae, :person=> @responsavele, :start_time => hora_inicio, :name => nome_feio, :discipline => @disc}) #:semestre => semestre, :course => @curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec
+        @less = Lesson.find_by({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=> @salae, :person=> @responsavele, :start_time => hora_inicio, :name => nome_feio, :discipline => @disc})
+        if @less.nil?
+          @less = Lesson.create({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=> @salae, :person=> @responsavele, :start_time => hora_inicio, :name => nome_feio, :discipline => @disc}) #:semestre => semestre, :course => @curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec
+        end
+
       elsif line_num %4 == 2
         responsavel = mensagem.split("\r\n")[0]
         @responsavele = Person.find_by(:name=>responsavel) 
@@ -73,9 +121,12 @@ queue.each do |ficheiro_dia_da_semana|
       if @horario.nil?
         @horario = Schedule.create({:school_year=>ano_lec, :year=>ano_curso, :schedule_class=> turma, :version=>"1", :course=> @cursoe, :name=>nome_lindo, :semester=>semestre})
       else
-        pp @horario
+        #pp @horario
       end
-      LessonSchedule.create(:lesson=>@less, :schedule=>@horario)
+      @rel = LessonSchedule.find_by({:lesson=>@less, :schedule=>@horario})
+      if @rel.nil?
+        LessonSchedule.create({:lesson=>@less, :schedule=>@horario})
+      end
 
   end
 end
