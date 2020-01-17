@@ -11,17 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group row">
+    <%= form.label :name, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :school_name %>
-    <%= collection_select(:course, :school_id, School.all, :id, :name) %>
+  <div class="form-group row">
+    <%= form.label :school_name, class: "col-sm-2 col-form-label"  %>
+    <div class="col-sm-10">
+      <%= collection_select(:course, :school_id, School.all, :id, :name, {}, {class: "custom-select"}) %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= link_to 'Back', courses_path, class: "btn btn-secondary" %>
+    <%= form.submit class: "btn btn-dark" %>
   </div>
 <% end %>

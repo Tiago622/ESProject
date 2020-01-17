@@ -17,9 +17,9 @@
 
 <h5>Disciplines from this Course</h5>
 
-<ul class="list-group list-group-horizontal">
+<ul class="list-group list-group-horizontal mb-3">
   <% @course.disciplines.each do |discipline| %>
-    <li class="list-group-item">
+    <li class="list-group-item list-group-item-dark">
         <%= discipline.name %>
     </li>
   <% end %>
@@ -27,9 +27,9 @@
 
 <h5>Urls from this Course</h3>
 
-<ul class="list-group list-group-horizontal">
+<ul class="list-group list-group-horizontal mb-3">
   <% @course.urls.each do |url| %>
-    <li class="list-group-item">
+    <li class="list-group-item list-group-item-dark">
       <a href=<%= url.url %>>
         <%= url.url %>
       </a>
@@ -37,5 +37,5 @@
   <% end %>
 </ul>  
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+<%= link_to 'Back', courses_path, class: "btn btn-secondary" %>
+<%= link_to 'Edit', edit_course_path(@course), class: "btn btn-dark" %>

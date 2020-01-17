@@ -1,15 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  school_year: MyString
-  year: MyString
+  name: MyString
+  school_year: 2020/2021
+  year: 1st
   schedule_class: MyString
+  semester: MyString
   version: MyString
   course: one
 
 two:
-  school_year: MyString
-  year: MyString
+  name: MyString
+  school_year: '2020/2021'
+  year: 4th
   schedule_class: MyString
+  semester: MyString
   version: MyString
   course: two

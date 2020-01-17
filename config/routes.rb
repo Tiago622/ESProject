@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :roles
+  devise_for :users
   resources :reservations
   resources :spaces
   resources :lesson_schedules
@@ -7,7 +9,7 @@ Rails.application.routes.draw do
   resources :people
   resources :schedules
   #change root (home)
-  #root to: 'controller#action'
+  root to: 'organic_units#index'
   
   #single resource path example:
   #get 'login', to: 'controller#action'

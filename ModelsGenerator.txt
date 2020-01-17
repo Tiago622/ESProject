@@ -1,0 +1,44 @@
+rails generate scaffold OrganicUnit name:string acronym:string
+
+rails generate scaffold School name:string acronym:string address:string organic_unit:references
+
+rails generate scaffold Course name:string school:references
+
+rails generate scaffold Url url:string course:references
+
+rails generate scaffold Discipline name:string course:references
+
+rails generate scaffold Person name:string phone:string extension:string email:string cabinet:string job_title_1:string job_title_2:string job_title_3:string
+
+rails generate scaffold Schedule school_year:string year:string schedule_class:string version:string course:references  
+
+rails generate migration AddNameToSchedule name:string
+
+rails generate scaffold Lesson name:string lesson_type:string week_day:string start_time:time end_time:time discipline:references person:references (space:references)
+
+rails generate scaffold LessonSchedule lesson:references schedule:references
+
+rails generate scaffold Space name:string department:string type_of_space:string capacity:string description:string availability:boolean equipment:string
+
+rails generate migration AddSpaceToLessons space:references 
+
+rails generate scaffold Reservation reason:string state:string date:date start_time:time end_time:time person:references space:references
+
+rails generate migration AddSemesterToSchedule semester:string
+
+rails generate scaffold Role role:string
+
+rails generate migration addRoleToUsers role:references
+
+
+#####################################################################
+
+rails db:environment:set RAILS_ENV=development
+
+rails db:drop 
+
+rails db:create 
+
+rails db:migrate
+
+rails s -b 0.0.0.0

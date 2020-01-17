@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Name:</strong>
+  <%= @schedule.name %>
+</p>
+
+<p>
   <strong>School year:</strong>
   <%= @schedule.school_year %>
 </p>
@@ -13,6 +18,11 @@
 <p>
   <strong>Schedule class:</strong>
   <%= @schedule.schedule_class %>
+</p>
+
+<p>
+  <strong>Semester:</strong>
+  <%= @schedule.semester %>
 </p>
 
 <p>
@@ -35,5 +45,14 @@
   <%= @schedule.course.school.organic_unit.name %>
 </p>
 
-<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
-<%= link_to 'Back', schedules_path %>
+<h5>Lessons from this Schedule</h5>
+
+<ul class="list-group list-group-horizontal mb-3">
+  <% @schedule.lessons.each do |lesson| %>
+    <li class="list-group-item list-group-item-dark"><%= lesson.name %></li>
+  <% end %>
+</ul>  
+
+<%= link_to 'Back', schedules_path, class: "btn btn-secondary" %>
+<%= link_to 'Edit', edit_schedule_path(@schedule), class: "btn btn-dark" %>
+

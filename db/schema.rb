@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_06_223145) do
+ActiveRecord::Schema.define(version: 2020_01_17_131100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,13 @@ ActiveRecord::Schema.define(version: 2020_01_06_223145) do
     t.index ["space_id"], name: "index_lessons_on_space_id"
   end
 
+  create_table "lessons_schedules", id: false, force: :cascade do |t|
+    t.bigint "lesson_id"
+    t.bigint "schedule_id"
+    t.index ["lesson_id"], name: "index_lessons_schedules_on_lesson_id"
+    t.index ["schedule_id"], name: "index_lessons_schedules_on_schedule_id"
+  end
+
   create_table "organic_units", force: :cascade do |t|
     t.string "name"
     t.string "acronym"
@@ -90,6 +97,12 @@ ActiveRecord::Schema.define(version: 2020_01_06_223145) do
     t.index ["space_id"], name: "index_reservations_on_space_id"
   end
 
+  create_table "roles", force: :cascade do |t|
+    t.string "role"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "schedules", force: :cascade do |t|
     t.string "school_year"
     t.string "year"
@@ -99,6 +112,7 @@ ActiveRecord::Schema.define(version: 2020_01_06_223145) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.string "semester"
     t.index ["course_id"], name: "index_schedules_on_course_id"
   end
 
@@ -132,6 +146,21 @@ ActiveRecord::Schema.define(version: 2020_01_06_223145) do
     t.index ["course_id"], name: "index_urls_on_course_id"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.bigint "role_id"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["role_id"], name: "index_users_on_role_id"
+  end
+
   add_foreign_key "courses", "schools"
   add_foreign_key "disciplines", "courses"
   add_foreign_key "lesson_schedules", "lessons"
@@ -144,4 +173,5 @@ ActiveRecord::Schema.define(version: 2020_01_06_223145) do
   add_foreign_key "schedules", "courses"
   add_foreign_key "schools", "organic_units"
   add_foreign_key "urls", "courses"
+  add_foreign_key "users", "roles"
 end

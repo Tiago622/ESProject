@@ -20,5 +20,15 @@
   <%= @discipline.course.school.organic_unit.name %>
 </p>
 
-<%= link_to 'Edit', edit_discipline_path(@discipline) %> |
-<%= link_to 'Back', disciplines_path %>
+<h5>Lessons from this Discipline</h3>
+
+<ul class="list-group list-group-horizontal mb-3">
+  <% @discipline.lessons.each do |lesson| %>
+    <li class="list-group-item list-group-item-dark">
+      <%= lesson.name %>
+    </li>
+  <% end %>
+</ul>  
+
+<%= link_to 'Back', disciplines_path, class: "btn btn-secondary" %>
+<%= link_to 'Edit', edit_discipline_path(@discipline), class: "btn btn-dark" %>

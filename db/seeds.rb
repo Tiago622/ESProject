@@ -6,8 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Role.create([
+    { role: 'Admin'},
+    { role: 'Registered'},
+    { role: 'Banned'}
+])
+
 OrganicUnit.create([
-    {name: 'Instituto Politécnico de Tomar', acronym: 'IPT'}
+    { id:'1', name: 'Instituto Politécnico de Tomar', acronym: 'IPT'}
 ])
 
 School.create([
@@ -32,4 +38,8 @@ Discipline.create([
     {name:'Análise Matemática I', course_id:'3'},
     {name:'Introdução à Programação', course_id:'3'},
     {name:'Laboratórios de Engenharia Electrotécnica', course_id:'4'}
+])
+
+Url.create([
+    {url:'http://portal2.ipt.pt/media/manager.php?cmd=file&target=m1_MTI2MzQ', course_id:'3'}
 ])

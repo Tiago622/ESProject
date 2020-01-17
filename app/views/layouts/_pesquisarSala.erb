@@ -1,0 +1,44 @@
+<!-- MODAL -->
+<button class="btn btn-sm btn-secondary mr-5" type="button" data-toggle="modal" data-target="#exampleModal">
+    Search space...
+</button>
+<div class="modal fade " id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Space name:</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input id="searchSala" class="form-control mr-sm-2" type="search"
+                        placeholder="Example: B255" aria-label="Search" />
+                    <br>
+                    <%# <div class="form-row text-center">
+                        <div class="col-md-3 mt-md-0 mt-3">
+                            <label class="form-control text-center" for="inputInicio">De</label>
+                        </div>
+                        <div class="col-md-9 mt-md-0 mt-3">
+                            <input class="form-control" type="datetime-local" id="inputInicio" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-3 mt-md-0 mt-3">
+                            <label class="form-control text-center">até</label>
+                        </div>
+                        <div class="col-md-9 mt-md-0 mt-3">
+                            <input class="form-control" type="datetime-local" />
+                        </div>
+                    </div> %>
+                    <div class="modal-footer">
+                        <button class="btn btn-dark" type="search">Search</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

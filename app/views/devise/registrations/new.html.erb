@@ -1,0 +1,56 @@
+<div class="text-center container mt-5">
+
+    <div class="text-center mb-4">
+      <span class="display-4 font-weight-normal">Sign up</span>
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+       <div class="row d-flex justify-content-center mb-4">
+        <span class="col-1">
+          <%= f.label :email %>
+        </span>
+        <div class="col-6">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", required:"", class:"form-control"%>
+        </div>
+      </div>    
+
+      <div class="row d-flex justify-content-center mb-4">
+        <span class="col-1">
+          <%= f.label :name %>
+        </span>
+        <div class="col-6">
+          <%= f.text_field :name, autocomplete: "name", required:"", class:"form-control"%>
+        </div>
+      </div> 
+
+      <div class="row d-flex justify-content-center mb-4">
+        <span class="col-3">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+        </span>
+        <div class="col-4">
+          <%= f.password_field :password, autocomplete: "new-password", class:"form-control" %>
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center mb-4">
+        <span class="col-3">
+          <%= f.label :password_confirmation %><br />
+        </span>
+        <div class="col-4">
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control" %>
+        </div> 
+      </div>
+
+      <div class="actions row justify-content-md-center">
+        <%= f.submit "Sign up", class:"btn btn-dark btn-lg col-6 mb-4" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+</div>

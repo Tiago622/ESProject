@@ -2,17 +2,17 @@
 
 <h1>Reservations</h1>
 
-<table>
-  <thead>
+<table class="table table-hover">
+  <thead class="thead-dark">
     <tr>
-      <th>Reason</th>
-      <th>State</th>
-      <th>Date</th>
-      <th>Start time</th>
-      <th>End time</th>
-      <th>Person</th>
-      <th>Space</th>
-      <th colspan="3"></th>
+      <th scope="col">Reason</th>
+      <th scope="col">State</th>
+      <th scope="col">Date</th>
+      <th scope="col">Start time</th>
+      <th scope="col">End time</th>
+      <th scope="col">Person</th>
+      <th scope="col">Space</th>
+      <th scope="col" colspan="3">Option</th>
     </tr>
   </thead>
 
@@ -22,8 +22,8 @@
         <td><%= reservation.reason %></td>
         <td><%= reservation.state %></td>
         <td><%= reservation.date %></td>
-        <td><%= reservation.start_time %></td>
-        <td><%= reservation.end_time %></td>
+        <td><%= reservation.start_time.strftime("%I:%M%p") %></td>
+        <td><%= reservation.end_time.strftime("%I:%M%p") %></td>
         <td><%= reservation.person.name %></td>
         <td><%= reservation.space.name %></td>
         <td><%= link_to 'Show', reservation %></td>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Reservation', new_reservation_path %>
+<%= link_to 'New Reservation', new_reservation_path, class: "btn btn-dark" %>
