@@ -11,12 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :role %>
-    <%= form.text_field :role %>
+  <div class="form-group row">
+    <%= form.label :role, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :role, class: "form-control" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= link_to 'Back', roles_path, class: "btn btn-secondary" %>
+    <%= form.submit class: "btn btn-dark" %>
   </div>
 <% end %>

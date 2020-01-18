@@ -53,17 +53,39 @@
                         <a class="dropdown-item" href="/spaces/new">New</a>
                     </div>
                 </li>
+
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkSalas" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Schedules
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkSalas">
+                        <a class="dropdown-item" href="/schedules">List</a>
+                        <a class="dropdown-item" href="/schedules/new">New</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkSalas" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Lessons
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkSalas">
+                        <a class="dropdown-item" href="/lessons">List</a>
+                        <a class="dropdown-item" href="/lessons/new">New</a>
+                    </div>
+                </li>
             </ul>
 
             <!-- LOGOUT -->
             <div>
                 <%= render 'layouts/pesquisarSala' %>
-                <span class="navbar-text align-middle mr-3">
+                <span class="navbar-text align-middle ml-2 mr-2">
                     Welcome, 
                     <%= current_user.name %>!
                 </span>
-                <%= link_to 'Perfil', edit_user_registration_path,class:"btn btn-sm btn-secondary" %>
-                <%= link_to 'logout', destroy_user_session_path, method: :delete, class:"btn btn-sm btn-secondary" %>
+                <%= link_to 'Perfil', edit_user_registration_path,class:"btn btn-sm btn-dark" %>
+                <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"btn btn-sm btn-dark" %>
             </div>
         </div>
     </nav>
