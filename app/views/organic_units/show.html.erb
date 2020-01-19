@@ -14,7 +14,7 @@
 
 <ul class="list-group list-group-horizontal mb-3">
   <% @organic_unit.schools.each do |school| %>
-    <li class="list-group-item list-group-item-dark"><%= school.name %></li>
+    <li class="list-group-item list-group-item-dark"><%= link_to school.name, school %></li>
   <% end %>
 </ul>  
 

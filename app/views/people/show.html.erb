@@ -44,7 +44,7 @@
 
 <ul class="list-group list-group-horizontal mb-3">
   <% @person.lessons.each do |lesson| %>
-    <li class="list-group-item list-group-item-dark"><%= lesson.name %></li>
+    <li class="list-group-item list-group-item-dark"><%= link_to lesson.name, lesson %></li>
   <% end %>
 </ul>  
 
