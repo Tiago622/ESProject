@@ -5,7 +5,7 @@ one:
   school_year: 2020/21
   year: 1
   schedule_class: MyString
-  semester: MyString
+  semester: 2
   version: MyString
   course: one
 
@@ -14,6 +14,6 @@ two:
   school_year: '2020/21'
   year: 4
   schedule_class: MyString
-  semester: MyString
+  semester: 1
   version: MyString
   course: two

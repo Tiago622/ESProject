@@ -1,11 +1,12 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:show, :edit, :update, :destroy]
   #before_action :authenticate_user!
+  helper_method :sort_column, :sort_direction
 
   # GET /reservations
   # GET /reservations.json
   def index
-    @reservations = Reservation.all
+    @reservations = Reservation.order(sort_column + " " + sort_direction)
   end
 
   # GET /reservations/1
@@ -71,5 +72,14 @@ class ReservationsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def reservation_params
       params.require(:reservation).permit(:reason, :state, :date, :start_time, :end_time, :person_id, :space_id)
+    end
+
+    
+    def sort_column
+      Reservation.column_names.include?(params[:sort]) ? params[:sort] : "reason"
+    end
+    
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end

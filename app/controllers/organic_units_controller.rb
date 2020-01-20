@@ -1,11 +1,12 @@
 class OrganicUnitsController < ApplicationController
   before_action :set_organic_unit, only: [:show, :edit, :update, :destroy]
   #before_action :authenticate_user!
+  helper_method :sort_column, :sort_direction
 
   # GET /organic_units
   # GET /organic_units.json
   def index
-    @organic_units = OrganicUnit.all
+    @organic_units = OrganicUnit.order(sort_column + " " + sort_direction)
   end
 
   # GET /organic_units/1
@@ -71,5 +72,13 @@ class OrganicUnitsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def organic_unit_params
       params.require(:organic_unit).permit(:name, :acronym)
+    end
+     
+    def sort_column
+      OrganicUnit.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    end
+    
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end
