@@ -2,8 +2,8 @@
 
 <h1>Schools</h1>
 
-<table>
-  <thead>
+<table class="table table-hover">
+  <thead class="thead-dark">
     <tr>
       <th scope="col">School name</th>
       <th scope="col">Acronym</th>
@@ -19,7 +19,7 @@
         <td><%= link_to school.name, school %></td>
         <td><%= school.acronym %></td>
         <td><%= school.address %></td>
-        <td><%= school.organic_unit %></td>
+        <td><%= link_to school.organic_unit.name, school.organic_unit %></td>
         <td><%= link_to 'Edit', edit_school_path(school) %></td>
         <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

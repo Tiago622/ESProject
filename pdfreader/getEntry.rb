@@ -37,8 +37,9 @@ ficheiro = File.read(Rails.root+"pdfreader/pessoas.csv")
 table = CSV.parse(ficheiro, headers: true)
 
 table.each do |linha|
-    Person.create({:name=>linha['nome']})
-    puts "#{linha['nome']} : #{linha['email']}"
+  nome=linha['nome'].split(" ")[0]+ " "+linha['nome'].split(" ")[-1]
+  Person.create({:name=>nome,:email=>linha['email']})
+  puts "#{nome} : #{linha['email']}"
 end
 
 
@@ -47,9 +48,13 @@ queue = ["SEGUNDA", "TERCA", "QUARTA", "QUINTA", "SEXTA"] #, "SABADO" #meter qua
 arrays=[]
 
 
-unidade= {:name=>"IPT", :acronym=> "IPT"}
 
-@ou = OrganicUnit.create(unidade)
+
+@ou = OrganicUnit.find_by({:acronym=>"IPT"})
+if @ou.nil?
+  unidade= {:name=>"IPT", :acronym=> "IPT"}
+  @ou = OrganicUnit.create(unidade)
+end
 
 escola= {:name=> "ESTTss", :acronym=> "ESTT", :address=>"sim", :organic_unit=> @ou}
 
@@ -66,11 +71,12 @@ queue.each do |ficheiro_dia_da_semana|
   cadeira=""
   hora_inicio=""
   hora_fim=""
+  dia_s=""
   File.open(Rails.root+"pdfreader/"+nome_ficheiro).each do |line|
     
       linha = line.split('/')
       semestre = "#{linha[1].split(": ")[1]}"
-      ano_lec = "#{linha[2].split(": ")[1]}"
+      ano_lec = linha[2].split(": ")[1].split(" | ").join("/")
       turma = "#{linha[3].split(": ")[1]}" #turma
       
       ano_curso = "#{linha[4].split(": ")[1]}" #ano
@@ -93,7 +99,7 @@ queue.each do |ficheiro_dia_da_semana|
           #@salae =Space.create({:name=>sala,:description=>sala}) 
           puts sala
         end
-        nome_feio= " "+ cadeira+ " "+ tipo + " " +responsavel + " " + sala + " " + dia_s
+        nome_feio= ""+ cadeira+ " "+ tipo + " " +responsavel + " " + sala + " " + dia_s+""
         @less = Lesson.find_by({:end_time => hora_fim, :week_day=>dia_s,:space=> @salae, :person=> @responsavele, :start_time => hora_inicio})
         if @less.nil?
           @less = Lesson.create({:lesson_type => tipo, :week_day=>dia_s, :end_time => hora_fim, :space=> @salae, :person=> @responsavele, :start_time => hora_inicio, :name => nome_feio, :discipline => @disc}) #:semestre => semestre, :course => @curso, :ano_curso => ano_curso, :turma => turma, :ano_lec => ano_lec
