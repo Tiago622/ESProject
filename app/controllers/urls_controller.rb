@@ -1,6 +1,6 @@
 class UrlsController < ApplicationController
   before_action :set_url, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
   
   # GET /urls
   # GET /urls.json

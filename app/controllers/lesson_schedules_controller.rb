@@ -1,6 +1,6 @@
 class LessonSchedulesController < ApplicationController
   before_action :set_lesson_schedule, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
 
   # GET /lesson_schedules
   # GET /lesson_schedules.json

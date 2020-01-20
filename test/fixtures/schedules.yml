@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  school_year: 2020/2021
-  year: 1st
+  school_year: 2020/21
+  year: 1
   schedule_class: MyString
   semester: MyString
   version: MyString
@@ -11,8 +11,8 @@ one:
 
 two:
   name: MyString
-  school_year: '2020/2021'
-  year: 4th
+  school_year: '2020/21'
+  year: 4
   schedule_class: MyString
   semester: MyString
   version: MyString
