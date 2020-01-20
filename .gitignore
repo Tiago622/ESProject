@@ -55,3 +55,4 @@ config/initializers/secret_token.rb
 *.box
 pdfreader/hmm.rb
 pdfreader/pessoas.csv
+ipt_rooms.csv
