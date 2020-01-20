@@ -26,20 +26,25 @@
 </p>
 
 <p>
+  <strong>Space:</strong>
+  <%= link_to @lesson.space.name, @lesson.space %>
+</p>
+
+<p>
   <strong>Discipline:</strong>
-  <%= @lesson.discipline.name %>
+  <%= link_to @lesson.discipline.name, @lesson.discipline %>
 </p>
 
 <p>
   <strong>Person:</strong>
-  <%= @lesson.person.name %>
+  <%= link_to @lesson.person.name, @lesson.person %>
 </p>
 
 <h5>Schedules from this Lesson</h5>
 
 <ul class="list-group list-group-horizontal mb-3">
   <% @lesson.schedules.each do |schedule| %>
-    <li class="list-group-item list-group-item-dark"><%= schedule.name %></li>
+    <li class="list-group-item list-group-item-dark"><%= link_to schedule.name, schedule %></li>
   <% end %>
 </ul>  
 

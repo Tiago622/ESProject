@@ -7,12 +7,12 @@
 
 <p>
   <strong>School:</strong>
-  <%= @course.school.name %> 
+  <%= link_to @course.school.name, @course.school %> 
 </p>
 
 <p>
   <strong>Organic Unit:</strong>
-  <%= @course.school.organic_unit.name %> 
+  <%= link_to @course.school.organic_unit.name, @course.school.organic_unit %> 
 </p>
 
 <h5>Disciplines from this Course</h5>
@@ -20,7 +20,7 @@
 <ul class="list-group list-group-horizontal mb-3">
   <% @course.disciplines.each do |discipline| %>
     <li class="list-group-item list-group-item-dark">
-        <%= discipline.name %>
+        <%= link_to discipline.name, discipline %>
     </li>
   <% end %>
 </ul>  

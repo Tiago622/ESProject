@@ -1,10 +1,13 @@
 class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
+  #before_action :authenticate_user!
+  helper_method :sort_column, :sort_direction
 
   # GET /lessons
   # GET /lessons.json
   def index
-    @lessons = Lesson.all
+    @lessons = Lesson.order(sort_column + " " + sort_direction)    
+
   end
 
   # GET /lessons/1
@@ -70,5 +73,14 @@ class LessonsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def lesson_params
       params.require(:lesson).permit(:name, :lesson_type, :week_day, :start_time, :end_time, :discipline_id, :person_id, :space_id)
+    end
+
+     
+    def sort_column
+      Lesson.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    end
+    
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end

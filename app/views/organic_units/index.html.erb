@@ -5,18 +5,17 @@
 <table class="table table-hover">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Acronym</th>
-      <th scope="col" colspan="3">Option</th>
+      <th scope="col"><%= sortable "name" %></th>
+      <th scope="col"><%= sortable "acronym" %></th>
+      <th scope="col" colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @organic_units.each do |organic_unit| %>
       <tr>
-        <td><%= organic_unit.name %></td>
+        <td><%= link_to organic_unit.name, organic_unit %></td>
         <td><%= organic_unit.acronym %></td>
-        <td><%= link_to 'Show', organic_unit %></td>
         <td><%= link_to 'Edit', edit_organic_unit_path(organic_unit) %></td>
         <td><%= link_to 'Destroy', organic_unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

@@ -22,7 +22,7 @@
 /Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.30 - 18.00/Text: (T)
 /Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.00 - 18.30/Text: Carlos Queiroz
 /Semestre: 1/AnoLec: 2019 | 20 /Class: B/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.30 - 19.00/Text: B255
-/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.00 - 17.30/Text: Arq. de Comput. I Est. Dados e Alg.
+/Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.00 - 17.30/Text: Arq. de Comput. I
 /Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 17.30 - 18.00/Text: (T)
 /Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.00 - 18.30/Text: Carlos Queiroz
 /Semestre: 1/AnoLec: 2019 | 20 /Class: C/Year: 2/Course: Licenciatura em Engenharia Informática/Day: QUARTA/Hour: 18.30 - 19.00/Text: B255

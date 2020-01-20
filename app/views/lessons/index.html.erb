@@ -5,30 +5,29 @@
 <table class="table table-hover">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Lesson type</th>
-      <th scope="col">Week day</th>
-      <th scope="col">Start time</th>
-      <th scope="col">End time</th>
-      <th scope="col">Discipline</th>
-      <th scope="col">Person</th>
-      <th scope="col">Space</th>
-      <th scope="col" colspan="3">Option</th>
+      <th scope="col"><%= sortable "name" %></th>
+      <th scope="col"><%= sortable "lesson_type" %></th>
+      <th scope="col"><%= sortable "week_day" %></th>
+      <th scope="col"><%= sortable "space" %></th>
+      <th scope="col"><%= sortable "start_time" %></th>
+      <th scope="col"><%= sortable "end_time" %></th>
+      <th scope="col"><%= sortable "discipline" %></th>
+      <th scope="col"><%= sortable "person_id" %></th>
+      <th scope="col" colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @lessons.each do |lesson| %>
       <tr>
-        <td><%= lesson.name %></td>
+        <td><%= link_to lesson.name, lesson %></td>
         <td><%= lesson.lesson_type %></td>
         <td><%= lesson.week_day %></td>
+        <td><%= link_to lesson.space.name, lesson.space %></td>
         <td><%= lesson.start_time.strftime("%I:%M%p") %></td>
         <td><%= lesson.end_time.strftime("%I:%M%p") %></td>
-        <td><%= lesson.discipline.name %></td>
-        <td><%= lesson.person.name %></td>
-        <td><%= lesson.space.name %></td>
-        <td><%= link_to 'Show', lesson %></td>
+        <td><%= link_to lesson.discipline.name, lesson.discipline %></td>
+        <td><%= link_to lesson.person.name, lesson.person %></td>
         <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
         <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

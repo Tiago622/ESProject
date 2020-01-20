@@ -1,10 +1,12 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
+  #before_action :authenticate_user!
+  helper_method :sort_column, :sort_direction
 
   # GET /people
   # GET /people.json
   def index
-    @people = Person.all
+    @people = Person.order(sort_column + " " + sort_direction)   
   end
 
   # GET /people/1
@@ -68,7 +70,17 @@ class PeopleController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def person_params
+  def person_params
       params.require(:person).permit(:name, :phone, :extension, :email, :cabinet, :job_title_1, :job_title_2, :job_title_3)
+      #params.require(:q).permit(:valor);
+    end
+    
+     
+    def sort_column
+      Person.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    end
+    
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end

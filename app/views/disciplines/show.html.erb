@@ -7,17 +7,17 @@
 
 <p>
   <strong>Course:</strong>
-  <%= @discipline.course.name %>
+  <%= link_to @discipline.course.name, @discipline.course  %>
 </p>
 
 <p>
   <strong>School:</strong>
-  <%= @discipline.course.school.name %>
+  <%= link_to @discipline.course.school.name, @discipline.course.school %>
 </p>
 
 <p>
   <strong>Organic Unit:</strong>
-  <%= @discipline.course.school.organic_unit.name %>
+  <%= link_to @discipline.course.school.organic_unit.name, @discipline.course.school.organic_unit %>
 </p>
 
 <h5>Lessons from this Discipline</h3>
@@ -25,7 +25,7 @@
 <ul class="list-group list-group-horizontal mb-3">
   <% @discipline.lessons.each do |lesson| %>
     <li class="list-group-item list-group-item-dark">
-      <%= lesson.name %>
+      <%= link_to lesson.name, lesson %>
     </li>
   <% end %>
 </ul>  

@@ -5,10 +5,10 @@
         <a class="navbar-brand" href="/">Schedules</a>
         <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
         <div>
-            <%= render 'layouts/pesquisarSala' %>
             </div>
             <!-- LOGIN -->
             <div>
+                <%= render 'layouts/pesquisarSala' %>
                 <%= link_to 'Login', new_user_session_path, class:"btn btn-sm btn-secondary" %>
                 <%= link_to 'Register', new_user_registration_path, class:"btn btn-sm btn-secondary" %>
             </div>
@@ -28,11 +28,11 @@
                 <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkReservas" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Reservas
+                        Reservations
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkReservas">
-                        <a class="dropdown-item" href="/reservations">Listar</a>
-                        <a class="dropdown-item" href="/reservations/new">Nova</a>
+                        <a class="dropdown-item" href="/reservations">List</a>
+                        <a class="dropdown-item" href="/reservations/new">New</a>
                         <%# <a class="dropdown-item" href="#">Pendentes</a>  %>
                     </div>
                 </li>
@@ -46,25 +46,46 @@
                 <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkSalas" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Salas
+                        Spaces
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkSalas">
-                        <a class="dropdown-item" href="/spaces">Listar</a>
-                        <a class="dropdown-item" href="/spaces/new">Nova</a>
+                        <a class="dropdown-item" href="/spaces">List</a>
+                        <a class="dropdown-item" href="/spaces/new">New</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkSalas" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Schedules
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkSalas">
+                        <a class="dropdown-item" href="/schedules">List</a>
+                        <a class="dropdown-item" href="/schedules/new">New</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkSalas" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Lessons
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkSalas">
+                        <a class="dropdown-item" href="/lessons">List</a>
+                        <a class="dropdown-item" href="/lessons/new">New</a>
                     </div>
                 </li>
             </ul>
 
-                <%= render 'layouts/pesquisarSala' %>
-
             <!-- LOGOUT -->
             <div>
-                <span class="navbar-text align-middle">
-                    Bem-vindo, 
-                    <%= current_user.name %>
+                <%= render 'layouts/pesquisarSala' %>
+                <span class="navbar-text align-middle ml-2 mr-2">
+                    Welcome, 
+                    <%= current_user.name %>!
                 </span>
-                <%= link_to 'Perfil', edit_user_registration_path,class:"btn btn-sm btn-secondary" %>
-                <%= link_to 'logout', destroy_user_session_path, method: :delete, class:"btn btn-sm btn-secondary" %>
+                <%= link_to 'Perfil', edit_user_registration_path,class:"btn btn-sm btn-dark" %>
+                <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"btn btn-sm btn-dark" %>
             </div>
         </div>
     </nav>

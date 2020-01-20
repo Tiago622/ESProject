@@ -53,3 +53,6 @@ config/initializers/secret_token.rb
 
 ### Vagrant Patch ###
 *.box
+pdfreader/hmm.rb
+pdfreader/pessoas.csv
+ipt_rooms.csv

@@ -1,13 +1,13 @@
 <!-- MODAL -->
 <button class="btn btn-sm btn-secondary" type="button" data-toggle="modal" data-target="#exampleModal">
-    Pesquisar sala
+    Search space...
 </button>
 <div class="modal fade " id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">sala</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Space name:</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -15,7 +15,7 @@
             <div class="modal-body">
                 <form>
                     <input id="searchSala" class="form-control mr-sm-2" type="search"
-                        placeholder="sala" aria-label="Search" />
+                        placeholder="Example: B255" aria-label="Search" />
                     <br>
                     <%# <div class="form-row text-center">
                         <div class="col-md-3 mt-md-0 mt-3">
@@ -34,9 +34,19 @@
                         </div>
                     </div> %>
                     <div class="modal-footer">
-                        <button class="btn btn-success" type="search">Pesquisar</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        
+                        <button class="btn btn-dark" type="search">Search</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
+                    <!--quase que funciona ¯\_(ツ)_/¯ falta criar scafold para pesquisa desta maneira
+                    
+                    
+                    <form action="q">
+                        <input type="text" name="space" id="name">
+                        <button type="go">Create</button>
+                        </form>
+                    
+                    -->
                 </form>
             </div>
         </div>
