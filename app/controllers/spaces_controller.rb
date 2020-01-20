@@ -1,11 +1,13 @@
 class SpacesController < ApplicationController
   before_action :set_space, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  helper_method :sort_column, :sort_direction
+  
   
   # GET /spaces
   # GET /spaces.json
   def index
-    @spaces = Space.all
+    @spaces = Space.order(sort_column + " " + sort_direction)    
   end
 
   # GET /spaces/1
@@ -71,5 +73,15 @@ class SpacesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def space_params
       params.require(:space).permit(:name, :department, :type_of_space, :capacity, :description, :availability, :equipment)
+    end
+
+    
+    def sort_column
+      Space.column_names.include?(params[:sort]) ? params[:sort] : "name"
+      
+    end
+    
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end

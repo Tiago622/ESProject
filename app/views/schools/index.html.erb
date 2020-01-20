@@ -9,18 +9,17 @@
       <th scope="col">Acronym</th>
       <th scope="col">Complete address</th>
       <th scope="col">Organic unit</th>
-      <th scope="col" colspan="3">Option</th>
+      <th scope="col" colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @schools.each do |school| %>
       <tr>
-        <td><%= school.name %></td>
+        <td><%= link_to school.name, school %></td>
         <td><%= school.acronym %></td>
         <td><%= school.address %></td>
-        <td><%= school.organic_unit.acronym %></td>
-        <td><%= link_to 'Show', school %></td>
+        <td><%= link_to school.organic_unit.name, school.organic_unit %></td>
         <td><%= link_to 'Edit', edit_school_path(school) %></td>
         <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

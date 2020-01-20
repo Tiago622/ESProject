@@ -5,4 +5,6 @@ class Lesson < ApplicationRecord
   belongs_to :space
   belongs_to :discipline
   belongs_to :person
+
+  validates :name, presence: true
 end

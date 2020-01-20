@@ -17,14 +17,14 @@
 
 <p>
   <strong>Organic unit:</strong>
-  <%= @school.organic_unit.name %>
+  <%= link_to @school.organic_unit.name, @school.organic_unit %>
 </p>
 
 <h5>Courses from this School</h5>
 
 <ul class="list-group list-group-horizontal mb-3">
   <% @school.courses.each do |course| %>
-    <li class="list-group-item list-group-item-dark"><%= course.name %></li>
+    <li class="list-group-item list-group-item-dark"><%= link_to course.name, course %></li>
   <% end %>
 </ul>  
 

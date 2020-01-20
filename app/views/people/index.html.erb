@@ -5,26 +5,23 @@
 <table class="table table-hover">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Name</th>
+      <th scope="col"><%= sortable "name" %></th>
       <th scope="col">Phone</th>
       <th scope="col">Extension</th>
       <th scope="col">Email</th>
-      <th scope="col">Cabinet</th>
       <th scope="col">Job title #1</th>
-      <th scope="col" colspan="3">Option</th>
+      <th scope="col" colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @people.each do |person| %>
       <tr>
-        <td><%= person.name %></td>
+        <td><%= link_to person.name, person %> </td>
         <td><%= person.phone %></td>
         <td><%= person.extension %></td>
         <td><%= person.email %></td>
-        <td><%= person.cabinet %></td>
         <td><%= person.job_title_1 %></td>
-        <td><%= link_to 'Show', person %></td>
         <td><%= link_to 'Edit', edit_person_path(person) %></td>
         <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

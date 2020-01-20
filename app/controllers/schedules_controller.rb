@@ -1,11 +1,12 @@
 class SchedulesController < ApplicationController
   before_action :set_schedule, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  helper_method :sort_column, :sort_direction
   
   # GET /schedules
   # GET /schedules.json
   def index
-    @schedules = Schedule.all
+    @schedules = Schedule.order(sort_column + " " + sort_direction)    
   end
 
   # GET /schedules/1
@@ -71,5 +72,14 @@ class SchedulesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def schedule_params
       params.require(:schedule).permit(:name, :school_year, :year, :schedule_class, :semester, :version, :course_id)
+    end
+
+     
+    def sort_column
+      Schedule.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    end
+    
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end

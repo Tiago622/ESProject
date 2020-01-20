@@ -7,16 +7,15 @@
     <tr>
       <th scope="col">Course name</th>
       <th scope="col">School</th>
-      <th scope="col" colspan="3">Option</th>
+      <th scope="col" colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @courses.each do |course| %>
       <tr>
-        <td><%= course.name %></td>
-        <td><%= course.school.name %></td>
-        <td><%= link_to 'Show', course %></td>
+        <td><%= link_to course.name, course %></td>
+        <td><%= link_to course.school.name, course.school %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

@@ -32,7 +32,7 @@
 
 <p>
   <strong>Course:</strong>
-  <%= @schedule.course.name %>
+  <%= link_to @schedule.course.name, @schedule.course %>
 </p>
 
 <p>
@@ -49,7 +49,7 @@
 
 <ul class="list-group list-group-horizontal mb-3">
   <% @schedule.lessons.each do |lesson| %>
-    <li class="list-group-item list-group-item-dark"><%= lesson.name %></li>
+    <li class="list-group-item list-group-item-dark"><%= link_to lesson.name, lesson %></li>
   <% end %>
 </ul>  
 
