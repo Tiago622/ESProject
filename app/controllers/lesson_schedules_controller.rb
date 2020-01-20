@@ -1,11 +1,11 @@
 class LessonSchedulesController < ApplicationController
   before_action :set_lesson_schedule, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
 
   # GET /lesson_schedules
   # GET /lesson_schedules.json
   def index
-    @lesson_schedules = LessonSchedule.all
+    @lesson_schedules = LessonSchedule.limit(50)
   end
 
   # GET /lesson_schedules/1

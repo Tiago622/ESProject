@@ -1,3 +1,3 @@
 class OrganicUnit < ApplicationRecord
-    has_one :school, dependent: :destroy 
+    has_many :schools, dependent: :destroy 
 end

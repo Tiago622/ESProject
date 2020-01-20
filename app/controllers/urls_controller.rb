@@ -1,11 +1,12 @@
 class UrlsController < ApplicationController
   before_action :set_url, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-  
+  #before_action :authenticate_user!
+  helper_method :sort_column, :sort_direction
+
   # GET /urls
   # GET /urls.json
   def index
-    @urls = Url.all
+    @urls = Url.order(sort_column + " " + sort_direction)    
   end
 
   # GET /urls/1
@@ -71,5 +72,13 @@ class UrlsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def url_params
       params.require(:url).permit(:url, :course_id)
+    end
+      
+    def sort_column
+      Url.column_names.include?(params[:sort]) ? params[:sort] : "url"
+    end
+    
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end

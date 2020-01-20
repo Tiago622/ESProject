@@ -14,7 +14,7 @@
   <tbody>
     <% @lesson_schedules.each do |lesson_schedule| %>
       <tr>
-        <td><%= link_to lesson_schedule.lesson, lesson_schedule  %></td>
+        <td><%= link_to lesson_schedule.lesson.name, lesson_schedule  %></td>
         <td><%= lesson_schedule.schedule.name %></td>
         <td><%= link_to 'Edit', edit_lesson_schedule_path(lesson_schedule) %></td>
         <td><%= link_to 'Destroy', lesson_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
