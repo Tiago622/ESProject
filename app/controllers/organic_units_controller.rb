@@ -1,5 +1,6 @@
 class OrganicUnitsController < ApplicationController
   before_action :set_organic_unit, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /organic_units
   # GET /organic_units.json
