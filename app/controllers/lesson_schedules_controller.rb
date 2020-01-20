@@ -5,7 +5,7 @@ class LessonSchedulesController < ApplicationController
   # GET /lesson_schedules
   # GET /lesson_schedules.json
   def index
-    @lesson_schedules = LessonSchedule.all
+    @lesson_schedules = LessonSchedule.limit(50)
   end
 
   # GET /lesson_schedules/1
