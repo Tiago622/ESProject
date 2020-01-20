@@ -64,6 +64,10 @@ class SpacesController < ApplicationController
     end
   end
 
+  def spaceName
+    @space = Space.find_by!(:name =>params[:search_spaces][:name])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_space

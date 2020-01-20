@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   resources :roles
   devise_for :users
   resources :reservations
-  resources :spaces
+  resources :spaces do 
+    collection do
+      get :search, to: 'spaces#spaceName'
+    end
+  end
   resources :lesson_schedules
   resources :lessons
   resources :people

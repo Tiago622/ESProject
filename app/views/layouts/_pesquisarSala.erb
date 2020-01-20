@@ -13,41 +13,14 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form>
-                    <input id="searchSala" class="form-control mr-sm-2" type="search"
-                        placeholder="Example: B255" aria-label="Search" />
-                    <br>
-                    <%# <div class="form-row text-center">
-                        <div class="col-md-3 mt-md-0 mt-3">
-                            <label class="form-control text-center" for="inputInicio">De</label>
-                        </div>
-                        <div class="col-md-9 mt-md-0 mt-3">
-                            <input class="form-control" type="datetime-local" id="inputInicio" />
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-3 mt-md-0 mt-3">
-                            <label class="form-control text-center">até</label>
-                        </div>
-                        <div class="col-md-9 mt-md-0 mt-3">
-                            <input class="form-control" type="datetime-local" />
-                        </div>
-                    </div> %>
-                    <div class="modal-footer">
-                        
-                        <button class="btn btn-dark" type="search">Search</button>
+                <%= form_for :search_spaces, url:search_spaces_path, method: :get do |form|%>
+                    <%= form.text_field :name, class:"form-control mr-sm-2", placeholder:"Example: B255" %>
+
+                    <div class="modal-footer actions">
+                        <%= form.submit "Search", class:"btn btn-dark" %>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                    <!--quase que funciona ¯\_(ツ)_/¯ falta criar scafold para pesquisa desta maneira
-                    
-                    
-                    <form action="q">
-                        <input type="text" name="space" id="name">
-                        <button type="go">Create</button>
-                        </form>
-                    
-                    -->
-                </form>
+                    </div>                   
+                <% end %>
             </div>
         </div>
     </div>
