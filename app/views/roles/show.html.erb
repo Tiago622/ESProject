@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @role.role %>
+</p>
+
+<h5>Users from this Role</h5>
+
+
+<ul class="list-group list-group-horizontal mb-3">
+  <% @role.users.each do |user| %>
+    <li class="list-group-item list-group-item-dark"><%= user.name %></li>
+  <% end %>
+</ul>  
+
+<%= link_to 'Back', roles_path, class: "btn btn-secondary" %>
+<%= link_to 'Edit', edit_role_path(@role), class: "btn btn-dark" %>

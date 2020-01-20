@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_13_213903) do
+ActiveRecord::Schema.define(version: 2020_01_17_131100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,6 +97,12 @@ ActiveRecord::Schema.define(version: 2020_01_13_213903) do
     t.index ["space_id"], name: "index_reservations_on_space_id"
   end
 
+  create_table "roles", force: :cascade do |t|
+    t.string "role"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "schedules", force: :cascade do |t|
     t.string "school_year"
     t.string "year"
@@ -149,8 +155,10 @@ ActiveRecord::Schema.define(version: 2020_01_13_213903) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.bigint "role_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["role_id"], name: "index_users_on_role_id"
   end
 
   add_foreign_key "courses", "schools"
@@ -165,4 +173,5 @@ ActiveRecord::Schema.define(version: 2020_01_13_213903) do
   add_foreign_key "schedules", "courses"
   add_foreign_key "schools", "organic_units"
   add_foreign_key "urls", "courses"
+  add_foreign_key "users", "roles"
 end

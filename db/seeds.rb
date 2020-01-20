@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Role.create([
+    { role: 'Admin'},
+    { role: 'Registered'},
+    { role: 'Banned'}
+])
 
 OrganicUnit.create([
     { id:'1', name: 'Instituto Politécnico de Tomar', acronym: 'IPT'}

@@ -26,6 +26,11 @@ rails generate scaffold Reservation reason:string state:string date:date start_t
 
 rails generate migration AddSemesterToSchedule semester:string
 
+rails generate scaffold Role role:string
+
+rails generate migration addRoleToUsers role:references
+
+
 #####################################################################
 
 rails db:environment:set RAILS_ENV=development
