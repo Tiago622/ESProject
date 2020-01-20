@@ -1,11 +1,15 @@
 class DisciplinesController < ApplicationController
   before_action :set_discipline, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  helper_method :sort_column, :sort_direction
 
   # GET /disciplines
   # GET /disciplines.json
   def index
-    @disciplines = Discipline.all
+    @disciplines = Discipline.order(sort_column + " " + sort_direction)    
+    #if params[:q]
+    #  @disciplines = Discipline.where(:name : params[:q])   
+    #end
   end
 
   # GET /disciplines/1
@@ -71,5 +75,14 @@ class DisciplinesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def discipline_params
       params.require(:discipline).permit(:name, :course_id)
+    end
+
+       
+    def sort_column
+      Discipline.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    end
+    
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end
