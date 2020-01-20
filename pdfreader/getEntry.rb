@@ -38,7 +38,13 @@ table = CSV.parse(ficheiro, headers: true)
 
 table.each do |linha|
   nome=linha['nome'].split(" ")[0]+ " "+linha['nome'].split(" ")[-1]
-  Person.create({:name=>nome,:email=>linha['email']})
+  if linha["gabinete"]
+    gabinete = linha["gabinete"].split(" ").join()
+  else
+    gabinete= ""
+  end
+
+  Person.create({:name=>nome,:email=>linha['email'], :cabinet=>gabinete, :job_title_1=>linha["cargo1"]})
   puts "#{nome} : #{linha['email']}"
 end
 
@@ -125,7 +131,7 @@ queue.each do |ficheiro_dia_da_semana|
         end
       end
       line_num += 1
-      nome_lindo= curso +": "+ano_curso + "ºano turma " + turma + " ano:" + ano_lec + ": " +semestre+ "º semestre"
+      nome_lindo= curso +": "+ano_curso + "ºano turma " + turma + " ano: " + ano_lec + ": " +semestre+ "º semestre"
 
       @horario = Schedule.find_by({:school_year=>ano_lec, :year=>ano_curso, :schedule_class=> turma, :version=>"1", :course=> @cursoe, :name=>nome_lindo, :semester=>semestre})
       if @horario.nil?

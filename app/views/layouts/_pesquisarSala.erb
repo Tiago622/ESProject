@@ -34,9 +34,22 @@
                         </div>
                     </div> %>
                     <div class="modal-footer">
+                        
                         <button class="btn btn-dark" type="search">Search</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
+                    <!--quase que funciona ¯\_(ツ)_/¯ falta criar scafold para pesquisa desta maneira
+                    
+                    
+                    <%= form_for :search, method: :get do |f| %>
+                        <p>
+                        <%= f.label "Search for" %>
+                        <%= text_field_tag :q, params[:q] %>
+                        <%= submit_tag "Go", name: nil %>
+                        </p>
+                    <% end %>
+                    
+                    -->
                 </form>
             </div>
         </div>
