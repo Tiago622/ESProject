@@ -13,12 +13,14 @@
 
   <tbody>
     <% @courses.each do |course| %>
+     <% cache course do %>
       <tr>
         <td><%= link_to course.name, course %></td>
         <td><%= link_to course.school.name, course.school %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
