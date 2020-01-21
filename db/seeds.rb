@@ -12,6 +12,11 @@ Role.create([
     { role: 'Banned'}
 ])
 
+User.create([
+    {email: 'admin@admin.com', password:"123qwe", name: 'admin', role_id: '1' },
+    {email: 'user1@user.com', password:"123qwe", name: 'user1', role_id: '2' }
+])
+
 OrganicUnit.create([
     { id:'1', name: 'Instituto Politécnico de Tomar', acronym: 'IPT'}
 ])
