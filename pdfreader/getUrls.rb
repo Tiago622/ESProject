@@ -20,7 +20,7 @@ lista_de_sources.each do |tipo|
 
         if e.value.match(/pt\/cursos/)
     
-            text = base_url+''+e.value+'/horarios\n'
+            text = base_url+''+e.value+'horarios\n'
             
             file.write(text) 
             puts text
