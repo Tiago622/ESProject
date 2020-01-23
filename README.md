@@ -29,7 +29,8 @@ vagrant destroy
 ### Ligar o servidor Rails
 ```bash
 cd /vagrant
-rails server -b 0.0.0.0
+rails db:drop; rails db:create; rails db:migrate; rails db:seed;rails r pdfreader/getEntry.rb;rails server -b 0.0.0.0
 ```
 Acesso: `localhost:3000`
+
  
