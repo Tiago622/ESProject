@@ -18,20 +18,25 @@
   </thead>
 
   <tbody>
-    <% @lessons.each do |lesson| %>
-      <tr>
-        <td><%= link_to lesson.name, lesson %></td>
-        <td><%= lesson.lesson_type %></td>
-        <td><%= lesson.week_day %></td>
-        <td><%= link_to lesson.space.name, lesson.space %></td>
-        <td><%= lesson.start_time.strftime("%I:%M%p") %></td>
-        <td><%= lesson.end_time.strftime("%I:%M%p") %></td>
-        <td><%= link_to lesson.discipline.name, lesson.discipline %></td>
-        <td><%= link_to lesson.person.name, lesson.person %></td>
-        <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
-        <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <% cache @lessons do %>
+      <% @lessons.each do |lesson| %>
+        <% cache lesson do %>
+            <tr>
+              <td><%= link_to lesson.name, lesson %></td>
+              <td><%= lesson.lesson_type %></td>
+              <td><%= lesson.week_day %></td>
+              <td><%= link_to lesson.space.name, lesson.space %></td>
+              <td><%= lesson.start_time.strftime("%I:%M%p") %></td>
+              <td><%= lesson.end_time.strftime("%I:%M%p") %></td>
+              <td><%= link_to lesson.discipline.name, lesson.discipline %></td>
+              <td><%= link_to lesson.person.name, lesson.person %></td>
+              <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
+              <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        <% end %>
     <% end %>
+    
   </tbody>
 </table>
 

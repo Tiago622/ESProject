@@ -18,18 +18,20 @@
 
   <tbody>
     <% @reservations.each do |reservation| %>
-      <tr>
-        <td><%= reservation.reason %></td>
-        <td><%= reservation.state %></td>
-        <td><%= reservation.date %></td>
-        <td><%= reservation.start_time.strftime("%I:%M%p") %></td>
-        <td><%= reservation.end_time.strftime("%I:%M%p") %></td>
-        <td><%= reservation.person.name %></td>
-        <td><%= reservation.space.name %></td>
-        <td><%= link_to 'Show', reservation %></td>
-        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
-        <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% cache reservation do %>
+        <tr>
+          <td><%= reservation.reason %></td>
+          <td><%= reservation.state %></td>
+          <td><%= reservation.date %></td>
+          <td><%= reservation.start_time.strftime("%I:%M%p") %></td>
+          <td><%= reservation.end_time.strftime("%I:%M%p") %></td>
+          <td><%= reservation.person.name %></td>
+          <td><%= reservation.space.name %></td>
+          <td><%= link_to 'Show', reservation %></td>
+          <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
+          <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

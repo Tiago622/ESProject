@@ -16,15 +16,18 @@
 
   <tbody>
     <% @people.each do |person| %>
-      <tr>
-        <td><%= link_to person.name, person %> </td>
-        <td><%= person.phone %></td>
-        <td><%= person.extension %></td>
-        <td><%= person.email %></td>
-        <td><%= person.job_title_1 %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% cache person do %>
+        <tr>
+          <td><%= link_to person.name, person %> </td>
+          <td><%= person.phone %></td>
+          <td><%= person.extension %></td>
+          <td><%= person.email %></td>
+          <td><%= person.job_title_1 %></td>
+          <td><%= link_to 'Edit', edit_person_path(person) %></td>
+          <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      
     <% end %>
   </tbody>
 </table>
